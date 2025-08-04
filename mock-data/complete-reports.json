@@ -1,0 +1,1127 @@
+[
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강남구 대치동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 강남구 대치동 학원가",
+    "regionCode": 11680,
+    "latitude": 37.510395,
+    "longitude": 127.050628
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강남구 논현동",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 강남구 역삼동 카페거리",
+    "regionCode": 11680,
+    "latitude": 37.51592,
+    "longitude": 127.042445
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 강남구 역삼동",
+    "content": "배달기사님이 \"제가 길치라서 늦었어요\"라고 솔직하게 말해서 팁 더 드렸어요",
+    "address": "서울특별시 강남구 역삼동 카페거리",
+    "regionCode": 11680,
+    "latitude": 37.514311,
+    "longitude": 127.042656
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 강남구 삼성동",
+    "content": "치킨 사려고 했는데 \"삼겹살도 같은 고기\"라며 추천해주는 알바생을 만났어요",
+    "address": "서울특별시 강남구 대치동 학원가",
+    "regionCode": 11680,
+    "latitude": 37.517637,
+    "longitude": 127.039416
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강남구 역삼동",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 강남구 대치동 학원가",
+    "regionCode": 11680,
+    "latitude": 37.514719,
+    "longitude": 127.03955
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강동구 암사동",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 강동구 성내동 상가",
+    "regionCode": 11740,
+    "latitude": 37.530369,
+    "longitude": 127.125923
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강동구 둔촌동",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 강동구 천호동 시장",
+    "regionCode": 11740,
+    "latitude": 37.536155,
+    "longitude": 127.122677
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 강동구 암사동",
+    "content": "할머니가 스마트폰 화면에 대고 \"여보세요!\" 외치시는 걸 봤어요ㅋㅋㅋ",
+    "address": "서울특별시 강동구 둔촌동 아파트",
+    "regionCode": 11740,
+    "latitude": 37.540072,
+    "longitude": 127.131682
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강동구 천호동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 강동구 강일동 신도시",
+    "regionCode": 11740,
+    "latitude": 37.53457,
+    "longitude": 127.123367
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강동구 성내동",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 강동구 암사동 한강공원",
+    "regionCode": 11740,
+    "latitude": 37.531013,
+    "longitude": 127.116086
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강북구 번동",
+    "content": "새벽 배달하는데 주문한 집이 폐가였고 문 앞에 음식이 사라져 있었어요",
+    "address": "서울특별시 강북구 우이동 산길",
+    "regionCode": 11305,
+    "latitude": 37.638,
+    "longitude": 127.020188
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강북구 인수동",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 강북구 수유동 먹자골목",
+    "regionCode": 11305,
+    "latitude": 37.633154,
+    "longitude": 127.03339
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 강북구 번동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 강북구 우이동 산길",
+    "regionCode": 11305,
+    "latitude": 37.632802,
+    "longitude": 127.032261
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강북구 인수동",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 강북구 우이동 산길",
+    "regionCode": 11305,
+    "latitude": 37.632617,
+    "longitude": 127.021567
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강북구 우이동",
+    "content": "새벽 배달하는데 주문한 집이 폐가였고 문 앞에 음식이 사라져 있었어요",
+    "address": "서울특별시 강북구 미아동 시장",
+    "regionCode": 11305,
+    "latitude": 37.644541,
+    "longitude": 127.030844
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 강서구 염창동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 강서구 등촌동 아파트",
+    "regionCode": 11500,
+    "latitude": 37.542534,
+    "longitude": 126.845588
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강서구 화곡동",
+    "content": "아메리카노 주문했는데 손님이 \"너무 쓰다\"며 설탕 20개 달라고 하고 소리까지 질렀어요",
+    "address": "서울특별시 강서구 발산동 지하철역",
+    "regionCode": 11500,
+    "latitude": 37.551732,
+    "longitude": 126.84078
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 강서구 발산동",
+    "content": "지하철에서 할머니가 핸드폰 진동을 심장 두근거림으로 착각해서 119에 신고하려고 하셨어요",
+    "address": "서울특별시 강서구 염창동 한강공원",
+    "regionCode": 11500,
+    "latitude": 37.551908,
+    "longitude": 126.85041
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강서구 발산동",
+    "content": "버스 탔는데 기사님이 \"카드 안찍혀\"라며 두 번 찍으라고 해서 요금 2배 냈어요",
+    "address": "서울특별시 강서구 방화동 공항",
+    "regionCode": 11500,
+    "latitude": 37.544477,
+    "longitude": 126.846668
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 강서구 발산동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 강서구 염창동 한강공원",
+    "regionCode": 11500,
+    "latitude": 37.553216,
+    "longitude": 126.850134
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 관악구 신림동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 관악구 서원동 시장",
+    "regionCode": 11620,
+    "latitude": 37.485299,
+    "longitude": 126.94628
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 관악구 신림동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 관악구 남현동 아파트",
+    "regionCode": 11620,
+    "latitude": 37.483687,
+    "longitude": 126.960621
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 관악구 봉천동",
+    "content": "짜장면 시켰는데 딸기가 들어있어서 물어보니 \"비타민C 보충용\"이라고 하셨어요ㅋㅋ",
+    "address": "서울특별시 관악구 봉천동 대학가",
+    "regionCode": 11620,
+    "latitude": 37.477879,
+    "longitude": 126.960192
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 관악구 신림동",
+    "content": "새벽 배달하는데 주문한 집이 폐가였고 문 앞에 음식이 사라져 있었어요",
+    "address": "서울특별시 관악구 신림동 고시촌",
+    "regionCode": 11620,
+    "latitude": 37.481537,
+    "longitude": 126.949936
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 관악구 봉천동",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 관악구 남현동 아파트",
+    "regionCode": 11620,
+    "latitude": 37.484758,
+    "longitude": 126.960233
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 광진구 건대입구",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 광진구 화양동 카페거리",
+    "regionCode": 11215,
+    "latitude": 37.534869,
+    "longitude": 127.09214
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 광진구 자양동",
+    "content": "음식점에서 물 달라고 했는데 \"셀프\"라고 하더니 정작 셀프바에는 물이 없었어요",
+    "address": "서울특별시 광진구 중곡동 시장",
+    "regionCode": 11215,
+    "latitude": 37.53367,
+    "longitude": 127.074421
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 광진구 중곡동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 광진구 화양동 카페거리",
+    "regionCode": 11215,
+    "latitude": 37.543964,
+    "longitude": 127.080778
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 광진구 중곡동",
+    "content": "음식점에서 물 달라고 했는데 \"셀프\"라고 하더니 정작 셀프바에는 물이 없었어요",
+    "address": "서울특별시 광진구 건대입구 상가",
+    "regionCode": 11215,
+    "latitude": 37.52883,
+    "longitude": 127.091098
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 광진구 구의동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 광진구 건대입구 상가",
+    "regionCode": 11215,
+    "latitude": 37.538378,
+    "longitude": 127.087541
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 구로구 천왕동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 구로구 오류동 시장",
+    "regionCode": 11530,
+    "latitude": 37.487244,
+    "longitude": 126.881048
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 구로구 구로디지털단지",
+    "content": "아메리카노 주문했는데 손님이 \"너무 쓰다\"며 설탕 20개 달라고 하고 소리까지 질렀어요",
+    "address": "서울특별시 구로구 오류동 시장",
+    "regionCode": 11530,
+    "latitude": 37.500546,
+    "longitude": 126.883741
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 구로구 항동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 구로구 신도림 상가",
+    "regionCode": 11530,
+    "latitude": 37.487831,
+    "longitude": 126.895737
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 구로구 천왕동",
+    "content": "음식점에서 물 달라고 했는데 \"셀프\"라고 하더니 정작 셀프바에는 물이 없었어요",
+    "address": "서울특별시 구로구 천왕동 주택가",
+    "regionCode": 11530,
+    "latitude": 37.498889,
+    "longitude": 126.883185
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 구로구 천왕동",
+    "content": "아메리카노 주문했는데 손님이 \"너무 쓰다\"며 설탕 20개 달라고 하고 소리까지 질렀어요",
+    "address": "서울특별시 구로구 신도림 상가",
+    "regionCode": 11530,
+    "latitude": 37.497447,
+    "longitude": 126.886633
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 금천구 가산디지털단지",
+    "content": "새벽 배달하는데 주문한 집이 폐가였고 문 앞에 음식이 사라져 있었어요",
+    "address": "서울특별시 금천구 두산동 상가",
+    "regionCode": 11545,
+    "latitude": 37.450001,
+    "longitude": 126.896953
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 금천구 금천구청",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 금천구 두산동 상가",
+    "regionCode": 11545,
+    "latitude": 37.447867,
+    "longitude": 126.901751
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 금천구 두산동",
+    "content": "할머니가 스마트폰 화면에 대고 \"여보세요!\" 외치시는 걸 봤어요ㅋㅋㅋ",
+    "address": "서울특별시 금천구 금천구청 앞",
+    "regionCode": 11545,
+    "latitude": 37.459376,
+    "longitude": 126.897358
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 금천구 가산디지털단지",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 금천구 독산동 시장",
+    "regionCode": 11545,
+    "latitude": 37.464971,
+    "longitude": 126.902678
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 금천구 금천구청",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 금천구 시흥동 아파트",
+    "regionCode": 11545,
+    "latitude": 37.448835,
+    "longitude": 126.899294
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 노원구 월계동",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 노원구 월계동 상가",
+    "regionCode": 11350,
+    "latitude": 37.65392,
+    "longitude": 127.061206
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 노원구 중계동",
+    "content": "온라인으로 예약했는데 \"시스템 오류\"라며 예약이 안됐다고 하고 기다리라고 했어요",
+    "address": "서울특별시 노원구 월계동 상가",
+    "regionCode": 11350,
+    "latitude": 37.652421,
+    "longitude": 127.057119
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 노원구 월계동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 노원구 공릉동 대학가",
+    "regionCode": 11350,
+    "latitude": 37.660992,
+    "longitude": 127.066358
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 노원구 중계동",
+    "content": "짜장면 시켰는데 딸기가 들어있어서 물어보니 \"비타민C 보충용\"이라고 하셨어요ㅋㅋ",
+    "address": "서울특별시 노원구 상계동 아파트",
+    "regionCode": 11350,
+    "latitude": 37.645138,
+    "longitude": 127.051972
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 노원구 중계동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 노원구 상계동 아파트",
+    "regionCode": 11350,
+    "latitude": 37.647857,
+    "longitude": 127.049155
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 도봉구 쌍문동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 도봉구 노원역 앞",
+    "regionCode": 11320,
+    "latitude": 37.666277,
+    "longitude": 127.04105
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 도봉구 노원역",
+    "content": "음식점에서 물 달라고 했는데 \"셀프\"라고 하더니 정작 셀프바에는 물이 없었어요",
+    "address": "서울특별시 도봉구 창동 상가",
+    "regionCode": 11320,
+    "latitude": 37.667573,
+    "longitude": 127.051865
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 도봉구 방학동",
+    "content": "치킨 사려고 했는데 \"삼겹살도 같은 고기\"라며 추천해주는 알바생을 만났어요",
+    "address": "서울특별시 도봉구 노원역 앞",
+    "regionCode": 11320,
+    "latitude": 37.666704,
+    "longitude": 127.052963
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 도봉구 쌍문동",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 도봉구 도봉동 산길",
+    "regionCode": 11320,
+    "latitude": 37.67065,
+    "longitude": 127.045333
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 도봉구 방학동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 도봉구 방학동 아파트",
+    "regionCode": 11320,
+    "latitude": 37.667592,
+    "longitude": 127.038271
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 동대문구 제기동",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 동대문구 청량리 시장",
+    "regionCode": 11230,
+    "latitude": 37.579495,
+    "longitude": 127.034365
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 동대문구 답십리동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 동대문구 장안동 아파트",
+    "regionCode": 11230,
+    "latitude": 37.581289,
+    "longitude": 127.045334
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 동대문구 제기동",
+    "content": "배달기사님이 \"제가 길치라서 늦었어요\"라고 솔직하게 말해서 팁 더 드렸어요",
+    "address": "서울특별시 동대문구 전농동 대학가",
+    "regionCode": 11230,
+    "latitude": 37.580693,
+    "longitude": 127.039179
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 동대문구 제기동",
+    "content": "계산하는데 바코드 안찍힌다며 \"이거 안팔아요\"라고 하는 직원을 만났어요",
+    "address": "서울특별시 동대문구 제기동 한의원가",
+    "regionCode": 11230,
+    "latitude": 37.577759,
+    "longitude": 127.033481
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 동대문구 장안동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 동대문구 청량리 시장",
+    "regionCode": 11230,
+    "latitude": 37.568645,
+    "longitude": 127.037861
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 동작구 노량진",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 동작구 상도동 아파트",
+    "regionCode": 11590,
+    "latitude": 37.507302,
+    "longitude": 126.946329
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 동작구 상도동",
+    "content": "아메리카노 주문했는데 손님이 \"너무 쓰다\"며 설탕 20개 달라고 하고 소리까지 질렀어요",
+    "address": "서울특별시 동작구 흑석동 대학가",
+    "regionCode": 11590,
+    "latitude": 37.503192,
+    "longitude": 126.93538
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 동작구 노량진",
+    "content": "지하철에서 할머니가 핸드폰 진동을 심장 두근거림으로 착각해서 119에 신고하려고 하셨어요",
+    "address": "서울특별시 동작구 상도동 아파트",
+    "regionCode": 11590,
+    "latitude": 37.506575,
+    "longitude": 126.936694
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 동작구 흑석동",
+    "content": "온라인으로 예약했는데 \"시스템 오류\"라며 예약이 안됐다고 하고 기다리라고 했어요",
+    "address": "서울특별시 동작구 사당동 상가",
+    "regionCode": 11590,
+    "latitude": 37.52191,
+    "longitude": 126.934296
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 동작구 흑석동",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 동작구 노량진 고시촌",
+    "regionCode": 11590,
+    "latitude": 37.50307,
+    "longitude": 126.937996
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 마포구 상암동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 마포구 연남동 골목",
+    "regionCode": 11440,
+    "latitude": 37.569969,
+    "longitude": 126.900177
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 마포구 홍대앞",
+    "content": "음식점에서 물 달라고 했는데 \"셀프\"라고 하더니 정작 셀프바에는 물이 없었어요",
+    "address": "서울특별시 마포구 서교동 상가",
+    "regionCode": 11440,
+    "latitude": 37.558993,
+    "longitude": 126.903995
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 마포구 홍대앞",
+    "content": "할머니가 스마트폰 화면에 대고 \"여보세요!\" 외치시는 걸 봤어요ㅋㅋㅋ",
+    "address": "서울특별시 마포구 합정동 카페거리",
+    "regionCode": 11440,
+    "latitude": 37.560651,
+    "longitude": 126.899129
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 마포구 서교동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 마포구 연남동 골목",
+    "regionCode": 11440,
+    "latitude": 37.562644,
+    "longitude": 126.90443
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 마포구 서교동",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 마포구 연남동 골목",
+    "regionCode": 11440,
+    "latitude": 37.575377,
+    "longitude": 126.910819
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 서대문구 충정로",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 서대문구 홍제동 시장",
+    "regionCode": 11410,
+    "latitude": 37.588455,
+    "longitude": 126.946376
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 서대문구 홍제동",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 서대문구 신촌 대학가",
+    "regionCode": 11410,
+    "latitude": 37.574177,
+    "longitude": 126.933223
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 서대문구 홍제동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 서대문구 홍제동 시장",
+    "regionCode": 11410,
+    "latitude": 37.573779,
+    "longitude": 126.929867
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 서대문구 연희동",
+    "content": "치킨 사려고 했는데 \"삼겹살도 같은 고기\"라며 추천해주는 알바생을 만났어요",
+    "address": "서울특별시 서대문구 충정로 오피스",
+    "regionCode": 11410,
+    "latitude": 37.574431,
+    "longitude": 126.942262
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 서대문구 신촌",
+    "content": "짜장면 시켰는데 딸기가 들어있어서 물어보니 \"비타민C 보충용\"이라고 하셨어요ㅋㅋ",
+    "address": "서울특별시 서대문구 북아현동 상가",
+    "regionCode": 11410,
+    "latitude": 37.585115,
+    "longitude": 126.941494
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 서초구 반포동",
+    "content": "새벽 편의점 알바하는데 후드 쓴 사람이 10분간 아무말 없이 돌아다니다가 그냥 나갔어요",
+    "address": "서울특별시 서초구 강남역 근처",
+    "regionCode": 11650,
+    "latitude": 37.478001,
+    "longitude": 127.040115
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 서초구 방배동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 서초구 잠원동 한강공원",
+    "regionCode": 11650,
+    "latitude": 37.48776,
+    "longitude": 127.028247
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 서초구 서초동",
+    "content": "배달기사님이 \"제가 길치라서 늦었어요\"라고 솔직하게 말해서 팁 더 드렸어요",
+    "address": "서울특별시 서초구 반포동 아파트",
+    "regionCode": 11650,
+    "latitude": 37.492983,
+    "longitude": 127.041402
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 서초구 서초동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 서초구 반포동 아파트",
+    "regionCode": 11650,
+    "latitude": 37.474246,
+    "longitude": 127.031771
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 서초구 서초동",
+    "content": "새벽에 지하보도 걸었는데 뒤에서 계속 따라오는 발자국 소리... 돌아봐도 아무도 없어서 무서웠어요",
+    "address": "서울특별시 서초구 강남역 근처",
+    "regionCode": 11650,
+    "latitude": 37.488606,
+    "longitude": 127.030785
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 성동구 왕십리",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 성동구 옥수동 한강변",
+    "regionCode": 11200,
+    "latitude": 37.554388,
+    "longitude": 127.030154
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 성동구 옥수동",
+    "content": "아메리카노 주문했는데 손님이 \"너무 쓰다\"며 설탕 20개 달라고 하고 소리까지 질렀어요",
+    "address": "서울특별시 성동구 성수동 카페거리",
+    "regionCode": 11200,
+    "latitude": 37.556159,
+    "longitude": 127.038692
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 성동구 왕십리",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 성동구 왕십리 상가",
+    "regionCode": 11200,
+    "latitude": 37.572843,
+    "longitude": 127.033299
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 성동구 금호동",
+    "content": "지하철에서 할머니가 핸드폰 진동을 심장 두근거림으로 착각해서 119에 신고하려고 하셨어요",
+    "address": "서울특별시 성동구 왕십리 상가",
+    "regionCode": 11200,
+    "latitude": 37.571981,
+    "longitude": 127.038023
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 성동구 금호동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 성동구 성수동 카페거리",
+    "regionCode": 11200,
+    "latitude": 37.556972,
+    "longitude": 127.030358
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 성북구 정릉동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 성북구 정릉동 산길",
+    "regionCode": 11290,
+    "latitude": 37.583197,
+    "longitude": 127.01428
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 성북구 성신여대입구",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 성북구 정릉동 산길",
+    "regionCode": 11290,
+    "latitude": 37.585671,
+    "longitude": 127.023547
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 성북구 길음동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 성북구 길음동 시장",
+    "regionCode": 11290,
+    "latitude": 37.581684,
+    "longitude": 127.026303
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 성북구 길음동",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 성북구 성신여대입구",
+    "regionCode": 11290,
+    "latitude": 37.581104,
+    "longitude": 127.024392
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 성북구 성신여대입구",
+    "content": "배달 주문했는데 2시간 늦게 와서 \"교통체증\"이라고 변명만 늘어놓더라고요",
+    "address": "서울특별시 성북구 하월곡동 아파트",
+    "regionCode": 11290,
+    "latitude": 37.585725,
+    "longitude": 127.022272
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 송파구 잠실",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 송파구 방이동 올림픽공원",
+    "regionCode": 11710,
+    "latitude": 37.518427,
+    "longitude": 127.100148
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 송파구 가락동",
+    "content": "계산하는데 바코드 안찍힌다며 \"이거 안팔아요\"라고 하는 직원을 만났어요",
+    "address": "서울특별시 송파구 문정동 법정단지",
+    "regionCode": 11710,
+    "latitude": 37.509701,
+    "longitude": 127.103113
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 송파구 문정동",
+    "content": "치킨 사려고 했는데 \"삼겹살도 같은 고기\"라며 추천해주는 알바생을 만났어요",
+    "address": "서울특별시 송파구 가락동 시장",
+    "regionCode": 11710,
+    "latitude": 37.505225,
+    "longitude": 127.115117
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 송파구 가락동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 송파구 잠실 롯데월드",
+    "regionCode": 11710,
+    "latitude": 37.511269,
+    "longitude": 127.10499
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 송파구 방이동",
+    "content": "지하철에서 할머니가 핸드폰 진동을 심장 두근거림으로 착각해서 119에 신고하려고 하셨어요",
+    "address": "서울특별시 송파구 방이동 올림픽공원",
+    "regionCode": 11710,
+    "latitude": 37.517836,
+    "longitude": 127.115377
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 양천구 신월동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 양천구 신월동 시장",
+    "regionCode": 11470,
+    "latitude": 37.51153,
+    "longitude": 126.871247
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 양천구 목동",
+    "content": "버스 탔는데 기사님이 \"카드 안찍혀\"라며 두 번 찍으라고 해서 요금 2배 냈어요",
+    "address": "서울특별시 양천구 신정동 상가",
+    "regionCode": 11470,
+    "latitude": 37.518709,
+    "longitude": 126.868718
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 양천구 신정동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 양천구 영등포구청 앞",
+    "regionCode": 11470,
+    "latitude": 37.515031,
+    "longitude": 126.875253
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 양천구 양평동",
+    "content": "지하철에서 할머니가 핸드폰 진동을 심장 두근거림으로 착각해서 119에 신고하려고 하셨어요",
+    "address": "서울특별시 양천구 신정동 상가",
+    "regionCode": 11470,
+    "latitude": 37.507502,
+    "longitude": 126.870263
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 양천구 양평동",
+    "content": "온라인으로 예약했는데 \"시스템 오류\"라며 예약이 안됐다고 하고 기다리라고 했어요",
+    "address": "서울특별시 양천구 목동 아파트",
+    "regionCode": 11470,
+    "latitude": 37.512463,
+    "longitude": 126.873208
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 영등포구 당산동",
+    "content": "새벽에 지하보도 걸었는데 뒤에서 계속 따라오는 발자국 소리... 돌아봐도 아무도 없어서 무서웠어요",
+    "address": "서울특별시 영등포구 영등포역 앞",
+    "regionCode": 11560,
+    "latitude": 37.534365,
+    "longitude": 126.900686
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 영등포구 신길동",
+    "content": "온라인으로 예약했는데 \"시스템 오류\"라며 예약이 안됐다고 하고 기다리라고 했어요",
+    "address": "서울특별시 영등포구 여의도 오피스",
+    "regionCode": 11560,
+    "latitude": 37.527901,
+    "longitude": 126.887771
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 영등포구 대림동",
+    "content": "짜장면 시켰는데 딸기가 들어있어서 물어보니 \"비타민C 보충용\"이라고 하셨어요ㅋㅋ",
+    "address": "서울특별시 영등포구 여의도 오피스",
+    "regionCode": 11560,
+    "latitude": 37.527131,
+    "longitude": 126.891885
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 영등포구 영등포역",
+    "content": "계산하는데 바코드 안찍힌다며 \"이거 안팔아요\"라고 하는 직원을 만났어요",
+    "address": "서울특별시 영등포구 여의도 오피스",
+    "regionCode": 11560,
+    "latitude": 37.528813,
+    "longitude": 126.898826
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 영등포구 당산동",
+    "content": "카페에서 \"아아 하나\"라고 했는데 \"네, 아아아아아아 하나요?\"라고 되묻는 직원분ㅋㅋ",
+    "address": "서울특별시 영등포구 대림동 차이나타운",
+    "regionCode": 11560,
+    "latitude": 37.533726,
+    "longitude": 126.888043
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 용산구 한남동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 용산구 이태원 클럽가",
+    "regionCode": 11170,
+    "latitude": 37.538082,
+    "longitude": 126.987283
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 용산구 이태원",
+    "content": "버스 탔는데 기사님이 \"카드 안찍혀\"라며 두 번 찍으라고 해서 요금 2배 냈어요",
+    "address": "서울특별시 용산구 청파동 상가",
+    "regionCode": 11170,
+    "latitude": 37.536734,
+    "longitude": 126.986913
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 용산구 이태원",
+    "content": "할아버지가 ATM기에 대고 \"돈 나와!\"라고 소리치시는 걸 봤어요ㅋㅋ",
+    "address": "서울특별시 용산구 한남동 고급주택",
+    "regionCode": 11170,
+    "latitude": 37.540888,
+    "longitude": 126.98867
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 용산구 한남동",
+    "content": "주차할 곳이 없어서 잠깐 세웠는데 5분만에 주차딱지 끊어놓고 갔어요",
+    "address": "서울특별시 용산구 후암동 남산",
+    "regionCode": 11170,
+    "latitude": 37.540359,
+    "longitude": 126.99221
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 용산구 후암동",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 용산구 후암동 남산",
+    "regionCode": 11170,
+    "latitude": 37.525656,
+    "longitude": 126.992185
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 은평구 녹번동",
+    "content": "새벽 산책하는데 가로등이 하나씩 꺼지면서 어둠이 따라와서 뛰어서 도망쳤어요",
+    "address": "서울특별시 은평구 연신내 상가",
+    "regionCode": 11380,
+    "latitude": 37.607774,
+    "longitude": 126.932209
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 은평구 구산동",
+    "content": "온라인으로 예약했는데 \"시스템 오류\"라며 예약이 안됐다고 하고 기다리라고 했어요",
+    "address": "서울특별시 은평구 불광동 시장",
+    "regionCode": 11380,
+    "latitude": 37.596735,
+    "longitude": 126.939054
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 은평구 진관동",
+    "content": "할머니가 스마트폰 화면에 대고 \"여보세요!\" 외치시는 걸 봤어요ㅋㅋㅋ",
+    "address": "서울특별시 은평구 구산동 주택가",
+    "regionCode": 11380,
+    "latitude": 37.593513,
+    "longitude": 126.926121
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 은평구 진관동",
+    "content": "배달기사님이 \"제가 길치라서 늦었어요\"라고 솔직하게 말해서 팁 더 드렸어요",
+    "address": "서울특별시 은평구 진관동 신도시",
+    "regionCode": 11380,
+    "latitude": 37.605972,
+    "longitude": 126.935645
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 은평구 녹번동",
+    "content": "엘리베이터에서 없는 층 버튼이 혼자 눌렸어요. 문 열리니까 벽만 있고 차가운 바람이 불어왔어요",
+    "address": "서울특별시 은평구 불광동 시장",
+    "regionCode": 11380,
+    "latitude": 37.601258,
+    "longitude": 126.938455
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 종로구 종각",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 종로구 인사동 골목",
+    "regionCode": 11110,
+    "latitude": 37.578884,
+    "longitude": 126.98554
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 종로구 인사동",
+    "content": "계산하는데 바코드 안찍힌다며 \"이거 안팔아요\"라고 하는 직원을 만났어요",
+    "address": "서울특별시 종로구 명동 관광지",
+    "regionCode": 11110,
+    "latitude": 37.571101,
+    "longitude": 126.979115
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 종로구 명동",
+    "content": "할머니가 스마트폰 화면에 대고 \"여보세요!\" 외치시는 걸 봤어요ㅋㅋㅋ",
+    "address": "서울특별시 종로구 명동 관광지",
+    "regionCode": 11110,
+    "latitude": 37.571474,
+    "longitude": 126.985749
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 종로구 인사동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 종로구 삼청동 카페거리",
+    "regionCode": 11110,
+    "latitude": 37.570721,
+    "longitude": 126.986223
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 종로구 인사동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 종로구 종각 상가",
+    "regionCode": 11110,
+    "latitude": 37.572442,
+    "longitude": 126.9835
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 중구 을지로",
+    "content": "CCTV가 없는 골목에서 누군가 계속 지켜보는 느낌이 들어서 소름이 돋았어요",
+    "address": "서울특별시 중구 황학동 벼룩시장",
+    "regionCode": 11140,
+    "latitude": 37.556194,
+    "longitude": 127.001034
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 중구 명동",
+    "content": "시간 10분 남았는데 \"시간 다됐다\"며 강제 종료당하고 5분 더 준다면서 3분만 줬어요",
+    "address": "서울특별시 중구 신당동 약령시장",
+    "regionCode": 11140,
+    "latitude": 37.558084,
+    "longitude": 126.997004
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 중구 황학동",
+    "content": "짜장면 시켰는데 딸기가 들어있어서 물어보니 \"비타민C 보충용\"이라고 하셨어요ㅋㅋ",
+    "address": "서울특별시 중구 을지로 상가",
+    "regionCode": 11140,
+    "latitude": 37.561401,
+    "longitude": 126.991951
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 중구 신당동",
+    "content": "지하주차장에서 차 시동을 켜려는데 뒷좌석에서 숨소리가 들려서 경찰에 신고했어요",
+    "address": "서울특별시 중구 명동 쇼핑가",
+    "regionCode": 11140,
+    "latitude": 37.570407,
+    "longitude": 126.995263
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 중구 신당동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 중구 신당동 약령시장",
+    "regionCode": 11140,
+    "latitude": 37.566389,
+    "longitude": 126.990059
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 중랑구 망우동",
+    "content": "새벽 편의점 알바하는데 후드 쓴 사람이 10분간 아무말 없이 돌아다니다가 그냥 나갔어요",
+    "address": "서울특별시 중랑구 신내동 택지",
+    "regionCode": 11260,
+    "latitude": 37.601622,
+    "longitude": 127.086013
+  },
+  {
+    "emotion": "ANNOYING",
+    "title": "개짜증) 중랑구 중화동",
+    "content": "계산하는데 바코드 안찍힌다며 \"이거 안팔아요\"라고 하는 직원을 만났어요",
+    "address": "서울특별시 중랑구 상봉동 시장",
+    "regionCode": 11260,
+    "latitude": 37.608126,
+    "longitude": 127.091155
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 중랑구 중화동",
+    "content": "배달기사님이 \"제가 길치라서 늦었어요\"라고 솔직하게 말해서 팁 더 드렸어요",
+    "address": "서울특별시 중랑구 중화동 아파트",
+    "regionCode": 11260,
+    "latitude": 37.597026,
+    "longitude": 127.093647
+  },
+  {
+    "emotion": "SCARY",
+    "title": "개무섭) 중랑구 묵동",
+    "content": "아파트 화재계단에서 이상한 웃음소리가 들려서 확인해봤는데 아무도 없었어요",
+    "address": "서울특별시 중랑구 중화동 아파트",
+    "regionCode": 11260,
+    "latitude": 37.598485,
+    "longitude": 127.096179
+  },
+  {
+    "emotion": "FUNNY",
+    "title": "개웃김) 중랑구 상봉동",
+    "content": "택시 탔는데 기사님이 \"인생은 신호등 같다\"며 갑자기 철학자가 되셨어요ㅋㅋ",
+    "address": "서울특별시 중랑구 망우동 산길",
+    "regionCode": 11260,
+    "latitude": 37.612045,
+    "longitude": 127.088887
+  }
+]

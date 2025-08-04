@@ -1,19 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <title>HellMap - 지옥 지도</title>
+    <meta name="description" content="실시간 감정 공유 플랫폼 HellMap에서 지역별 감정을 확인하고 공유하세요." />
+    
+    <!-- 네이버 지도 API -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=%VITE_NAVER_MAP_CLIENT_ID%&submodules=geocoder"></script>
+    
+    <!-- 구글 Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_API_KEY%&libraries=places"></script>
+    
+    <!-- Pretendard 폰트 -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet">
+    
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    
+    <style>
+      /* 로딩 화면 */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-content {
+        text-align: center;
+        color: #00ff88;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 2px solid transparent;
+        border-top: 2px solid #00ff88;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 16px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* 로딩 완료 후 숨김 */
+      .loading-screen.loaded {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+      }
+    </style>
   </head>
   <body>
+    <!-- 로딩 화면 -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <h1 style="font-size: 24px; margin-bottom: 8px;">HELLMAP</h1>
+        <p style="font-size: 14px; opacity: 0.7;">지옥 지도 로딩 중...</p>
+      </div>
+    </div>
+    
+    <!-- React 앱 -->
     <div id="root"></div>
+    
+    <!-- Vite 스크립트 -->
     <script type="module" src="/src/main.tsx"></script>
+    
     <script>
-      window.Kakao.Auth.login({
-        scope: 'profile_nickname,account_email,profile_image',
+      // 로딩 화면 제거
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('loaded');
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }
+        }, 1000);
       });
     </script>
   </body>

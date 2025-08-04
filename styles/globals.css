@@ -1,0 +1,894 @@
+[data-sonner-toaster] {
+  --z-index: 200 !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* HellMap Cyberpunk Colors */
+  --hellmap-dark-bg: #0a0a0a;
+  --hellmap-darker-bg: #050505;
+  --hellmap-card-bg: #1a1a1a;
+  --hellmap-neon-green: #00ff88;
+  --hellmap-neon-blue: #00ccff;
+  --hellmap-neon-orange: #ff6600;
+  --hellmap-neon-red: #ff0044;
+  --hellmap-neon-purple: #cc00ff;
+  --hellmap-fear-color: #ff0044;
+  --hellmap-anger-color: #ff6600;
+  --hellmap-laugh-color: #00ff88;
+  --hellmap-text-primary: #ffffff;
+  --hellmap-text-secondary: #cccccc;
+  --hellmap-text-muted: #888888;
+  --hellmap-border: #333333;
+  --hellmap-border-bright: #555555;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* HellMap Cyberpunk Colors */
+  --color-hellmap-dark-bg: var(--hellmap-dark-bg);
+  --color-hellmap-darker-bg: var(--hellmap-darker-bg);
+  --color-hellmap-card-bg: var(--hellmap-card-bg);
+  --color-hellmap-neon-green: var(--hellmap-neon-green);
+  --color-hellmap-neon-blue: var(--hellmap-neon-blue);
+  --color-hellmap-neon-orange: var(--hellmap-neon-orange);
+  --color-hellmap-neon-red: var(--hellmap-neon-red);
+  --color-hellmap-neon-purple: var(--hellmap-neon-purple);
+  --color-hellmap-fear-color: var(--hellmap-fear-color);
+  --color-hellmap-anger-color: var(--hellmap-anger-color);
+  --color-hellmap-laugh-color: var(--hellmap-laugh-color);
+  --color-hellmap-text-primary: var(--hellmap-text-primary);
+  --color-hellmap-text-secondary: var(--hellmap-text-secondary);
+  --color-hellmap-text-muted: var(--hellmap-text-muted);
+  --color-hellmap-border: var(--hellmap-border);
+  --color-hellmap-border-bright: var(--hellmap-border-bright);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* HellMap Cyberpunk Utilities */
+@layer utilities {
+  .hellmap-cyberpunk-gradient {
+    background: linear-gradient(135deg, var(--hellmap-neon-purple), var(--hellmap-neon-blue), var(--hellmap-neon-green));
+  }
+  
+  .hellmap-neon-text-shadow {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  
+  .hellmap-neon-glow {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  
+  .hellmap-card-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--hellmap-border-bright);
+  }
+  
+  .hellmap-fear-glow {
+    box-shadow: 0 0 20px rgba(255, 0, 68, 0.3);
+  }
+  
+  .hellmap-anger-glow {
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.3);
+  }
+  
+  .hellmap-laugh-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+  
+  /* Enhanced Custom Icon Animations */
+  .hellmap-icon-fear {
+    animation: hellmap-fear-tremble 1.5s ease-in-out infinite;
+  }
+  
+  .hellmap-icon-anger {
+    animation: hellmap-anger-steam 2s ease-in-out infinite;
+  }
+  
+  .hellmap-icon-laugh {
+    animation: hellmap-laugh-wiggle 1.2s ease-in-out infinite;
+  }
+  
+  .hellmap-icon-fire {
+    animation: hellmap-fire-flicker 1.5s ease-in-out infinite;
+  }
+
+  /* Thumbnail and Image Effects */
+  .hellmap-thumbnail-glow {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+  
+  .hellmap-image-overlay {
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 136, 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: hellmap-scan-line 3s ease-in-out infinite;
+  }
+  
+  .hellmap-card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .hellmap-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 136, 0.2);
+  }
+}
+
+/* Enhanced Custom Keyframes */
+@keyframes hellmap-fear-tremble {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  10% {
+    transform: scale(1.02) rotate(0.5deg);
+  }
+  20% {
+    transform: scale(0.98) rotate(-0.5deg);
+  }
+  30% {
+    transform: scale(1.01) rotate(0.3deg);
+  }
+  40% {
+    transform: scale(0.99) rotate(-0.3deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes hellmap-anger-steam {
+  0%, 100% {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05);
+    filter: hue-rotate(10deg);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: hue-rotate(-10deg);
+  }
+  75% {
+    transform: scale(1.08);
+    filter: hue-rotate(5deg);
+  }
+}
+
+@keyframes hellmap-laugh-wiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(-5deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.07);
+  }
+}
+
+@keyframes hellmap-fire-flicker {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.02) rotate(1deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.98) rotate(-1deg);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.01) rotate(0.5deg);
+  }
+}
+
+@keyframes hellmap-scan-line {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Enhanced Report Marker Animations */
+@keyframes hellmap-report-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+@keyframes hellmap-pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes hellmap-shadow-pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes hellmap-badge-bounce {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
+
+@keyframes hellmap-sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+/* Enhanced Region Marker Animations */
+@keyframes hellmap-region-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+
+@keyframes hellmap-region-pulse-outer {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes hellmap-region-pulse-inner {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes hellmap-ai-loading {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes hellmap-ai-scan {
+  0% {
+    background-position: -200% -200%;
+    opacity: 0.3;
+  }
+  50% {
+    background-position: 0% 0%;
+    opacity: 0.7;
+  }
+  100% {
+    background-position: 200% 200%;
+    opacity: 0.3;
+  }
+}
+
+@keyframes hellmap-scan-line-horizontal {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes hellmap-level-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px #ff6b6b80;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff6b6b, 0 0 35px #ff6b6b80;
+  }
+}
+
+@keyframes hellmap-shadow-float {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes hellmap-hologram {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(-50%, -50%) scale(1.05) rotate(90deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1.05) rotate(270deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+/* Current Location Marker Animation */
+@keyframes hellmap-current-location-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Additional utility classes for better emotion representation */
+@layer utilities {
+  .hellmap-emotion-fear {
+    color: var(--hellmap-fear-color);
+    text-shadow: 0 0 10px var(--hellmap-fear-color);
+  }
+  
+  .hellmap-emotion-anger {
+    color: var(--hellmap-anger-color);
+    text-shadow: 0 0 10px var(--hellmap-anger-color);
+  }
+  
+  .hellmap-emotion-laugh {
+    color: var(--hellmap-laugh-color);
+    text-shadow: 0 0 10px var(--hellmap-laugh-color);
+  }
+  
+  .hellmap-marker-glow {
+    filter: drop-shadow(0 0 15px currentColor);
+  }
+
+  .hellmap-thumbnail-filter {
+    filter: sepia(0.3) saturate(1.2) brightness(0.8) contrast(1.1);
+    transition: filter 0.3s ease;
+  }
+  
+  .hellmap-thumbnail-filter:hover {
+    filter: sepia(0.1) saturate(1.4) brightness(1) contrast(1.2);
+  }
+}
+
+/* 네이버 지도 컨트롤 버튼 z-index 수정 (UI 겹침 방지) */
+.nmap-control-map-type,
+.nmap-control-zoom,
+.nmap-control-scale,
+.nmap-control-compass,
+.nmap-control-zoom-button,
+.nmap-control-map-type-button,
+.gmnoprint,
+.gm-style-cc,
+[data-control-id="zoom"],
+[data-control-id="maptype"],
+[data-control-id="scale"],
+[data-control-id="compass"],
+/* 네이버 지도 v3 새로운 클래스들 */
+.naver-map-control,
+.naver-map-control-zoom,
+.naver-map-control-maptype,
+/* 추가적인 네이버 지도 컨트롤 클래스들 */
+div[class*="nmap-control"],
+div[class*="control-zoom"],
+div[class*="control-map"] {
+  z-index: 0 !important;
+  position: relative !important;
+}
+
+/* 지도 컨테이너 자체의 z-index도 제한 */
+.naver-map,
+#map,
+[id*="map"],
+div[class*="naver-map"] {
+  z-index: 0 !important;
+}
+
+/* 헤더가 지도 컨트롤보다 항상 위에 표시되도록 강제 */
+header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+
+/* 네이버 지도의 모든 자식 요소들의 z-index 제한 */
+[id*="map"] *,
+.naver-map *,
+div[class*="naver-map"] * {
+  z-index: auto !important;
+  max-height: none !important;
+}
+
+/* 특별히 문제가 되는 네이버 지도 요소들 */
+.naver-map div,
+.naver-map button,
+.naver-map a,
+[id*="map"] div,
+[id*="map"] button,
+[id*="map"] a {
+  z-index: 0 !important;
+}
+
+/* 모달이 열렸을 때 지도 컨트롤 숨기기 */
+body:has(.z-\[9999\]) .nmap-control-map-type,
+body:has(.z-\[9999\]) .nmap-control-zoom,
+body:has(.z-\[9999\]) .nmap-control-scale,
+body:has(.z-\[9999\]) .nmap-control-compass,
+body:has(.z-\[9999\]) .gmnoprint,
+body:has(.z-\[9999\]) div[class*="nmap-control"],
+body:has(.z-\[9999\]) div[class*="control-zoom"],
+body:has(.z-\[9999\]) div[class*="control-map"] {
+  display: none !important;
+}
+
+/* HellMap 커스텀 스크롤바 스타일 */
+.hellmap-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color, var(--hellmap-neon-blue)) var(--hellmap-darker-bg);
+  scroll-behavior: smooth;
+  overflow-anchor: none;
+}
+
+/* WebKit 브라우저용 스크롤바 */
+.hellmap-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.hellmap-scroll::-webkit-scrollbar-track {
+  background: var(--hellmap-darker-bg);
+  border-radius: 4px;
+  border: 1px solid var(--hellmap-border);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.hellmap-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg, 
+    var(--scrollbar-color, var(--hellmap-neon-blue)), 
+    rgba(0, 204, 255, 0.8)
+  );
+  /* Fallback for older browsers */
+  background: var(--scrollbar-color, var(--hellmap-neon-blue));
+  border-radius: 4px;
+  border: 1px solid var(--hellmap-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 20px;
+}
+
+.hellmap-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg, 
+    var(--scrollbar-color, var(--hellmap-neon-blue)), 
+    var(--scrollbar-color, var(--hellmap-neon-blue))
+  );
+  /* Fallback for older browsers */
+  background: var(--scrollbar-color, var(--hellmap-neon-blue));
+  box-shadow: 
+    0 0 8px var(--scrollbar-color, var(--hellmap-neon-blue)),
+    0 0 16px rgba(0, 204, 255, 0.5);
+  transform: scaleX(1.2);
+  border-color: var(--scrollbar-color, var(--hellmap-neon-blue));
+}
+
+.hellmap-scroll::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-color, var(--hellmap-neon-blue));
+  box-shadow: 
+    0 0 15px var(--scrollbar-color, var(--hellmap-neon-blue)),
+    inset 0 0 8px rgba(0, 0, 0, 0.4);
+  transform: scaleX(1.1);
+}
+
+.hellmap-scroll::-webkit-scrollbar-corner {
+  background: var(--hellmap-darker-bg);
+  border: 1px solid var(--hellmap-border);
+}
+
+/* 모바일에서 스크롤 개선 */
+@media (max-width: 1024px) {
+  .hellmap-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scrollbar-width: none; /* 모바일에서는 스크롤바 숨김 */
+  }
+  
+  .hellmap-scroll::-webkit-scrollbar {
+    display: none; /* 모바일에서는 스크롤바 숨김 */
+  }
+}
+
+/* 모달 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 현재 위치 펄스 애니메이션 */
+@keyframes hellmap-current-location-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* 헬맵 로고 스타일 */
+.hellmap-logo-glow {
+  filter: drop-shadow(0 0 8px var(--hellmap-neon-green)40);
+  transition: all 0.3s ease;
+}
+
+.hellmap-logo-glow:hover {
+  filter: drop-shadow(0 0 15px var(--hellmap-neon-green)80);
+  transform: scale(1.05);
+}
+
+.hellmap-text-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor;
+}
+
+.hellmap-map-pulse {
+  animation: hellmap-map-breathe 6s ease-in-out infinite;
+}
+
+.hellmap-marker-pulse {
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+@keyframes hellmap-map-breathe {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.hellmap-background-pulse {
+  animation: hellmap-background-pulse 5s ease-in-out infinite;
+}
+
+@keyframes hellmap-background-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    r: 46px;
+  }
+  50% {
+    opacity: 0.5;
+    r: 50px;
+  }
+}
+
+/* HellMap Select Styles */
+.hellmap-select-content {
+  background-color: var(--hellmap-card-bg) !important;
+  border-color: var(--hellmap-border) !important;
+  color: var(--hellmap-text-primary) !important;
+}
+
+.hellmap-select-item {
+  color: var(--hellmap-text-primary) !important;
+  background-color: var(--hellmap-card-bg) !important;
+}
+
+.hellmap-select-item:hover {
+  background-color: var(--hellmap-darker-bg) !important;
+  color: var(--hellmap-neon-green) !important;
+}
+
+.hellmap-select-item[data-highlighted] {
+  background-color: var(--hellmap-darker-bg) !important;
+  color: var(--hellmap-neon-green) !important;
+}
+
+.hellmap-select-item[data-state="checked"] {
+  background-color: var(--hellmap-neon-green) !important;
+  color: var(--hellmap-dark-bg) !important;
+}
+
+.hellmap-select-item[data-state="checked"]:hover {
+  background-color: var(--hellmap-neon-green) !important;
+  color: var(--hellmap-dark-bg) !important;
+}
+
