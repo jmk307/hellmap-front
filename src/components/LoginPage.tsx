@@ -1,7 +1,7 @@
 
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-import { FireIcon } from './icons/EmotionIcons';
+import { HellMapLogo } from './icons/HellMapLogo';
 
 interface LoginPageProps {
   onSocialLogin: (provider: 'kakao' | 'google') => void;
@@ -43,14 +43,8 @@ export function LoginPage({ onSocialLogin }: LoginPageProps) {
       <div className="relative z-10 w-full max-w-md">
         {/* Logo Section */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <FireIcon size={48} />
-            <h1 
-              className="text-4xl hellmap-neon-text-shadow"
-              style={{ color: 'var(--hellmap-neon-green)' }}
-            >
-              HELLMAP
-            </h1>
+          <div className="flex justify-center mb-4">
+            <HellMapLogo size={300} variant="default" />
           </div>
           <div 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border"
