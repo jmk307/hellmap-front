@@ -280,6 +280,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
             anchor: new window.naver.maps.Point(12, 12)
           }
         });
+        console.log(currentLocationMarker);
         
         setNaverMap(map);
         setMapError(null);
