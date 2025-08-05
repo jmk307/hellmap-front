@@ -254,8 +254,32 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
         const map = new window.naver.maps.Map(mapRef.current, mapOptions);
         
         // 현재 위치에 마커 추가
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const currentLocationMarker = new window.naver.maps.Marker({
+          position: new window.naver.maps.LatLng(currentLocation.lat, currentLocation.lng),
+          map: map,
+          icon: {
+            content: `
+              <div style="
+                width: 24px;
+                height: 24px;
+                background-color: #00ccff;
+                border: 3px solid white;
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+                animation: pulse 2s infinite;
+              ">
+                <style>
+                  @keyframes pulse {
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.2); opacity: 0.8; }
+                    100% { transform: scale(1); opacity: 1; }
+                  }
+                </style>
+              </div>
+            `,
+            anchor: new window.naver.maps.Point(12, 12)
+          }
+        });
         
         setNaverMap(map);
         setMapError(null);
