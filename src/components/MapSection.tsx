@@ -301,7 +301,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
   // 백엔드에서 지역구 데이터 가져오기
   const fetchRegionsData = async (): Promise<BackendRegionData[]> => {
     try {
-      const apiUrl = 'http://localhost:5000/api/reports/regions';
+      const apiUrl = 'https://www.api-hellmap.shop/api/reports/regions';
   
       const response = await fetch(apiUrl);
       
