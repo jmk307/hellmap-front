@@ -241,8 +241,8 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
 
       // API 호출 (수정 또는 생성)
       const url = editData 
-        ? `http://localhost:5000/api/reports/${editData.reportId}` 
-        : 'http://localhost:5000/api/reports';
+        ? `https://www.api-hellmap.shop/api/reports/${editData.reportId}` 
+        : 'https://www.api-hellmap.shop/api/reports';
       
       const response = await fetch(url, {
         method: editData ? 'PUT' : 'POST',

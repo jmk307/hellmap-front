@@ -72,7 +72,7 @@ export default function App() {
   // 제보 데이터 가져오기
   const fetchReports = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/reports', {
+      const response = await axios.get('https://www.api-hellmap.shop/api/reports', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -135,7 +135,7 @@ export default function App() {
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
-        const response = await axios.post<AuthResponse>('http://localhost:5000/api/auth/google', {
+        const response = await axios.post<AuthResponse>('https://www.api-hellmap.shop/api/auth/google', {
           accessToken: tokenResponse.access_token
         });
         setProviderInfo({ provider: response.data.data.provider, providerId: response.data.data.providerId });
@@ -183,7 +183,7 @@ export default function App() {
     window.Kakao.Auth.login({
       scope: 'profile_nickname',
       success: function (authObj: any) {
-        axios.post<AuthResponse>('http://localhost:5000/api/auth/kakao', {
+        axios.post<AuthResponse>('https://www.api-hellmap.shop/api/auth/kakao', {
           accessToken: authObj.access_token,
         }).then(res => {
           setProviderInfo({ provider: res.data.data.provider, providerId: res.data.data.providerId });
@@ -220,7 +220,7 @@ export default function App() {
   // 닉네임 중복 체크
   const checkNicknameDuplicate = async (nickname: string) => {
     try {
-      const response = await axios.get<NicknameCheckResponse>(`http://localhost:5000/api/auth?nickname=${encodeURIComponent(nickname)}`);
+      const response = await axios.get<NicknameCheckResponse>(`https://www.api-hellmap.shop/api/auth?nickname=${encodeURIComponent(nickname)}`);
       
       // API 응답: data가 true면 중복, false면 사용 가능
       const isDuplicated = response.data.data;
@@ -237,7 +237,7 @@ export default function App() {
   const handleNicknameComplete = async (nickname: string) => {
     if (!providerInfo) return;
     try {
-      const response = await axios.post<SignupResponse>('http://localhost:5000/api/auth/signup', {
+      const response = await axios.post<SignupResponse>('https://www.api-hellmap.shop/api/auth/signup', {
         provider: providerInfo.provider.toLowerCase(),
         providerId: providerInfo.providerId,
         nickname: nickname,
@@ -305,7 +305,7 @@ export default function App() {
   const handleReportDelete = async (report: Report) => {
     try {
       // PATCH /api/reports/{reportId} 호출
-      const response = await axios.patch(`http://localhost:5000/api/reports/${report.reportId}`, {
+      const response = await axios.patch(`https://www.api-hellmap.shop/api/reports/${report.reportId}`, {
         isDeleted: true
       }, {
         headers: {
@@ -369,7 +369,7 @@ export default function App() {
   const handleFeedbackSubmit = async (feedbackData: any) => {
     try {
       // 피드백 데이터를 서버로 전송
-      const response = await axios.post('http://localhost:5000/api/feedbacks', feedbackData, {
+      const response = await axios.post('https://www.api-hellmap.shop/api/feedbacks', feedbackData, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -414,7 +414,7 @@ export default function App() {
   const handleLikeReport = async (reportId: string) => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/reports/${reportId}`,
+        `https://www.api-hellmap.shop/api/reports/${reportId}`,
         {},  // 빈 객체를 body로 전송
         {
           headers: {
