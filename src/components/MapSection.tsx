@@ -1966,7 +1966,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
           style={{ backdropFilter: 'blur(10px)' }}
           onClick={() => setFullscreenImage(null)}
         >
-          <div className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
+          <div className="relative w-full max-w-6xl h-full max-h-[90vh] flex flex-col">
             {/* Close Button */}
             <Button
               onClick={() => setFullscreenImage(null)}
@@ -1982,42 +1982,43 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
 
             {/* Image Container */}
             <div 
-              className="relative max-w-full max-h-full flex flex-col items-center justify-center"
+              className="flex-1 flex items-center justify-center p-4"
               onClick={(e) => e.stopPropagation()}
             >
               <div 
-                className="rounded-lg shadow-2xl"
+                className="w-full h-full max-w-4xl max-h-[70vh] rounded-lg shadow-2xl overflow-hidden"
                 style={{
+                  backgroundColor: 'var(--hellmap-darker-bg)',
                   boxShadow: '0 0 80px rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.2)'
                 }}
               >
                 <ImageWithFallback
                   src={fullscreenImage.url}
                   alt={fullscreenImage.title}
-                  className="max-w-full max-h-[70vh] object-contain rounded-lg"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              
-              {/* Image Info */}
-              <div className="mt-6 text-center max-w-2xl">
-                <h3 
-                  className="text-2xl font-bold mb-2"
-                  style={{ 
-                    color: 'white',
-                    textShadow: '0 0 20px rgba(255,255,255,0.5)'
-                  }}
-                >
-                  {fullscreenImage.title}
-                </h3>
-                <p 
-                  className="text-lg opacity-90"
-                  style={{ color: 'rgba(255,255,255,0.8)' }}
-                >
-                  {fullscreenImage.description}
-                </p>
-                <div className="mt-4 text-sm opacity-70" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                  <p>💡 ESC 키 또는 바깥 영역 클릭으로 닫기</p>
-                </div>
+            </div>
+            
+            {/* Image Info */}
+            <div className="flex-shrink-0 text-center p-4 max-w-4xl mx-auto">
+              <h3 
+                className="text-xl md:text-2xl font-bold mb-2"
+                style={{ 
+                  color: 'white',
+                  textShadow: '0 0 20px rgba(255,255,255,0.5)'
+                }}
+              >
+                {fullscreenImage.title}
+              </h3>
+              <p 
+                className="text-base md:text-lg opacity-90"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
+              >
+                {fullscreenImage.description}
+              </p>
+              <div className="mt-2 text-sm opacity-70" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                <p>💡 ESC 키 또는 바깥 영역 클릭으로 닫기</p>
               </div>
             </div>
 
