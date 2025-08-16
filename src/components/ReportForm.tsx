@@ -280,20 +280,20 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-start sm:items-center justify-center p-0 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out overflow-y-auto"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out overflow-y-auto"
       style={{ 
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
         animation: 'fadeIn 0.3s ease-out'
       }}
     >
       <div 
-        className="w-full max-w-2xl min-h-full sm:min-h-0 sm:max-h-[95vh] flex flex-col transition-all duration-300 ease-out my-0 sm:my-4"
+        className="w-full max-w-2xl max-h-[85vh] flex flex-col transition-all duration-300 ease-out my-3 sm:my-4"
         style={{
           animation: 'slideInUp 0.3s ease-out'
         }}
       >
         <Card 
-          className="border hellmap-card-glow flex flex-col h-full sm:h-auto sm:max-h-[95vh] shadow-2xl rounded-none sm:rounded-lg"
+          className="border hellmap-card-glow flex flex-col h-full shadow-2xl rounded-lg"
           style={{ 
             backgroundColor: 'var(--hellmap-card-bg)',
             borderColor: selectedEmotion.color,

@@ -1646,15 +1646,15 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
       {/* Enhanced Region Detail Modal */}
       {selectedRegion && (
         <div 
-          className="absolute inset-0 flex items-center justify-center z-50 p-4 pointer-events-auto"
+          className="fixed inset-0 flex items-center justify-center z-[200] p-3 sm:p-4 pointer-events-auto overflow-y-auto"
           style={{
             background: 'radial-gradient(circle at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.95) 100%)',
-            backdropFilter: 'blur(8px)'
+            backdropFilter: 'blur(10px)'
           }}
           onClick={() => setSelectedRegion(null)}
         >
           <Card 
-            className="max-w-lg w-full border-2 overflow-hidden transform transition-all duration-300 hover:scale-[1.02]"
+            className="max-w-lg w-full max-h-[80vh] border-2 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] rounded-lg my-3 sm:my-4"
             style={{
               backgroundColor: 'var(--hellmap-card-bg)',
               borderColor: getEmotionColor(selectedRegion.dominantEmotion),
@@ -1756,10 +1756,10 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                 {/* Close Button */}
                 <Button
                   onClick={() => setSelectedRegion(null)}
-                  className="absolute top-3 right-16 w-8 h-8 rounded-full border-2 hover:scale-110 transition-transform backdrop-blur-sm"
+                  className="absolute top-3 right-3 w-10 h-10 rounded-full border-2 hover:scale-110 transition-transform backdrop-blur-sm z-10"
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.6)',
-                    borderColor: 'rgba(255,255,255,0.3)',
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    borderColor: 'rgba(255,255,255,0.5)',
                     color: 'white'
                   }}
                 >
@@ -1844,10 +1844,10 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                 {/* Close Button */}
                 <Button
                   onClick={() => setSelectedRegion(null)}
-                  className="absolute top-3 right-16 w-8 h-8 rounded-full border-2 hover:scale-110 transition-transform backdrop-blur-sm"
+                  className="absolute top-3 right-3 w-10 h-10 rounded-full border-2 hover:scale-110 transition-transform backdrop-blur-sm z-10"
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.6)',
-                    borderColor: 'rgba(255,255,255,0.3)',
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    borderColor: 'rgba(255,255,255,0.5)',
                     color: 'white'
                   }}
                 >
@@ -1856,11 +1856,11 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
               </div>
             )}
 
-            <div className="p-6 space-y-6">
+            <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 overflow-y-auto">
               {/* Enhanced Stats Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div 
-                  className="text-center p-4 rounded-xl border-2 relative overflow-hidden group hover:scale-105 transition-transform duration-300"
+                  className="text-center p-3 sm:p-4 rounded-xl border-2 relative overflow-hidden group hover:scale-105 transition-transform duration-300"
                   style={{
                     backgroundColor: 'var(--hellmap-darker-bg)',
                     borderColor: 'var(--hellmap-neon-blue)',
@@ -1886,7 +1886,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                 </div>
                 
                 <div 
-                  className="text-center p-4 rounded-xl border-2 relative overflow-hidden group hover:scale-105 transition-transform duration-300"
+                  className="text-center p-3 sm:p-4 rounded-xl border-2 relative overflow-hidden group hover:scale-105 transition-transform duration-300"
                   style={{
                     backgroundColor: 'var(--hellmap-darker-bg)',
                     borderColor: getEmotionColor(selectedRegion.dominantEmotion),
@@ -1922,7 +1922,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
               {/* Enhanced Emotion Breakdown */}
               <div>
                 <h4 
-                  className="text-lg font-bold mb-4 flex items-center gap-2"
+                  className="text-base sm:text-lg font-bold mb-3 sm:mb-4 flex items-center gap-2"
                   style={{ 
                     color: 'var(--hellmap-text-primary)',
                     textShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
@@ -1933,7 +1933,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                     (총 {selectedRegion.totalReports}개 제보)
                   </div>
                 </h4>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {Object.entries(selectedRegion.emotionStats).map(([emotion, count]) => {
                     const percentage = selectedRegion.totalReports > 0 
                       ? (count / selectedRegion.totalReports) * 100 

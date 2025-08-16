@@ -70,18 +70,18 @@ export function ReportDetailModal({
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 flex items-start sm:items-center justify-center z-[100] p-0 sm:p-4 overflow-y-auto"
+      className="fixed inset-0 bg-black/80 flex items-center justify-center z-[100] p-3 sm:p-4 overflow-y-auto"
       onClick={onClose}
     >
       <Card 
-        className={`max-w-2xl w-full min-h-full sm:min-h-0 sm:max-h-[90vh] border overflow-hidden rounded-none sm:rounded-lg my-0 sm:my-4 ${getEmotionGlow(report.emotion)}`}
+        className={`max-w-2xl w-full max-h-[80vh] border overflow-hidden rounded-lg my-3 sm:my-4 ${getEmotionGlow(report.emotion)}`}
         style={{
           backgroundColor: 'var(--hellmap-card-bg)',
           borderColor: getEmotionColor(report.emotion)
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex flex-col h-full sm:max-h-[90vh]">
+        <div className="flex flex-col h-full max-h-[80vh]">
           {/* Header */}
           <div 
             className="p-4 lg:p-6 border-b flex-shrink-0"
