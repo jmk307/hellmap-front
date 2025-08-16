@@ -1986,17 +1986,27 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
               onClick={(e) => e.stopPropagation()}
             >
               <div 
-                className="w-full h-full max-w-4xl max-h-[70vh] rounded-lg shadow-2xl overflow-hidden"
+                className="relative flex items-center justify-center"
                 style={{
-                  backgroundColor: 'var(--hellmap-darker-bg)',
-                  boxShadow: '0 0 80px rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.2)'
+                  width: '100%',
+                  height: '100%',
+                  maxWidth: 'min(90vw, 1200px)',
+                  maxHeight: 'min(80vh, 800px)'
                 }}
               >
-                <ImageWithFallback
-                  src={fullscreenImage.url}
-                  alt={fullscreenImage.title}
-                  className="w-full h-full object-contain"
-                />
+                <div 
+                  className="rounded-lg shadow-2xl overflow-hidden"
+                  style={{
+                    backgroundColor: 'var(--hellmap-darker-bg)',
+                    boxShadow: '0 0 80px rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.2)'
+                  }}
+                >
+                  <ImageWithFallback
+                    src={fullscreenImage.url}
+                    alt={fullscreenImage.title}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
             
