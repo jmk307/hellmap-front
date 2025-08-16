@@ -13,6 +13,7 @@ import { Report } from '../types/report';
 import { toast, Toaster } from 'sonner';
 import axios from 'axios';
 import { useGoogleLogin } from '@react-oauth/google';
+import { Analytics } from '@vercel/analytics/react';
 
 interface AuthResponse {
   timestamp: string;
@@ -580,6 +581,9 @@ export default function App() {
           onSubmit={handleFeedbackSubmit}
         />
       )}
+      
+      {/* Vercel Analytics */}
+      <Analytics />
     </>
   );
 }
