@@ -72,55 +72,23 @@ export function Header({ activeFilter, onFilterChange, onLogout, onCreateReport,
           
           {/* Mobile Action Buttons */}
           <div className="flex items-center gap-2">
-            {/* Service Intro Button */}
-            {onServiceIntro && (
-              <Button
-                onClick={onServiceIntro}
-                className="px-2 py-1 rounded-lg border transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: 'var(--hellmap-card-bg)',
-                  borderColor: 'var(--hellmap-neon-blue)',
-                  color: 'var(--hellmap-neon-blue)'
-                }}
-              >
-                <span className="text-xs">ℹ️ 소개</span>
-              </Button>
-            )}
-
-            {/* Create Report Button */}
+            {/* Create Report Button - 가장 중요한 버튼만 표시 */}
             {onCreateReport && (
               <Button
                 onClick={onCreateReport}
-                className="px-2 py-1 rounded-lg border transition-all duration-300 hover:scale-105 hellmap-neon-glow"
+                className="px-3 py-2 rounded-lg border transition-all duration-300 hover:scale-105 hellmap-neon-glow"
                 style={{
                   backgroundColor: 'var(--hellmap-neon-green)',
                   borderColor: 'var(--hellmap-neon-green)',
                   color: 'black'
                 }}
               >
-                <span className="text-xs">✏️ 제보</span>
+                <span className="text-sm font-medium">✏️ 제보</span>
               </Button>
             )}
 
-            {/* Feedback Button */}
-            {onFeedback && (
-              <Button
-                onClick={onFeedback}
-                className="px-2 py-1 rounded-lg border transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: 'var(--hellmap-card-bg)',
-                  borderColor: 'var(--hellmap-neon-orange)',
-                  color: 'var(--hellmap-neon-orange)'
-                }}
-              >
-                <span className="text-xs">💬 피드백</span>
-              </Button>
-            )}
-            
-            <div className="flex items-center gap-2 text-xs">
-              <div style={{ color: 'var(--hellmap-text-secondary)' }}>
-                <span style={{ color: 'var(--hellmap-neon-green)' }}>{reportsCount.toLocaleString()}</span>
-              </div>
+            {/* Live Status */}
+            <div className="flex items-center gap-1">
               <div 
                 className="px-2 py-1 rounded-full animate-pulse"
                 style={{ 
@@ -128,11 +96,11 @@ export function Header({ activeFilter, onFilterChange, onLogout, onCreateReport,
                   color: 'white' 
                 }}
               >
-                LIVE
+                <span className="text-xs font-medium">LIVE</span>
               </div>
             </div>
             
-            {/* User Info & Logout */}
+            {/* User Menu - 간소화 */}
             {userNickname && (
               <div className="flex items-center gap-1">
                 <div 
@@ -145,20 +113,63 @@ export function Header({ activeFilter, onFilterChange, onLogout, onCreateReport,
                 >
                   {userNickname}
                 </div>
-                {onLogout && (
-                  <Button
-                    onClick={onLogout}
-                    className="px-2 py-1 rounded-lg border transition-all duration-300 hover:scale-105"
-                    style={{
-                      backgroundColor: 'var(--hellmap-card-bg)',
-                      borderColor: 'var(--hellmap-border-bright)',
-                      color: 'var(--hellmap-text-secondary)'
-                    }}
-                  >
-                    <span className="text-xs">나가기</span>
-                  </Button>
-                )}
               </div>
+            )}
+          </div>
+        </div>
+
+        {/* Second Row - Additional Actions (나머지 기능들을 두 번째 줄에 배치) */}
+        <div className="flex items-center justify-between px-4 py-2 border-t" style={{ borderColor: 'var(--hellmap-border)' }}>
+          <div className="flex items-center gap-2 text-xs">
+            <span style={{ color: 'var(--hellmap-text-secondary)' }}>
+              <span style={{ color: 'var(--hellmap-neon-green)' }}>{reportsCount.toLocaleString()}</span> 활성 제보
+            </span>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            {/* Service Intro Button */}
+            {onServiceIntro && (
+              <Button
+                onClick={onServiceIntro}
+                className="px-2 py-1 rounded border text-xs transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--hellmap-card-bg)',
+                  borderColor: 'var(--hellmap-neon-blue)',
+                  color: 'var(--hellmap-neon-blue)'
+                }}
+              >
+                ℹ️ 소개
+              </Button>
+            )}
+
+            {/* Feedback Button */}
+            {onFeedback && (
+              <Button
+                onClick={onFeedback}
+                className="px-2 py-1 rounded border text-xs transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--hellmap-card-bg)',
+                  borderColor: 'var(--hellmap-neon-orange)',
+                  color: 'var(--hellmap-neon-orange)'
+                }}
+              >
+                💬 피드백
+              </Button>
+            )}
+
+            {/* Logout Button */}
+            {onLogout && userNickname && (
+              <Button
+                onClick={onLogout}
+                className="px-2 py-1 rounded border text-xs transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--hellmap-card-bg)',
+                  borderColor: 'var(--hellmap-border-bright)',
+                  color: 'var(--hellmap-text-secondary)'
+                }}
+              >
+                나가기
+              </Button>
             )}
           </div>
         </div>
