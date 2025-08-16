@@ -1646,7 +1646,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
       {/* Enhanced Region Detail Modal */}
       {selectedRegion && (
         <div 
-          className="fixed inset-0 flex items-center justify-center z-[200] p-3 sm:p-4 pointer-events-auto overflow-y-auto"
+          className="fixed inset-0 flex items-center justify-center z-[250] p-3 sm:p-4 pointer-events-auto overflow-y-auto"
           style={{
             background: 'radial-gradient(circle at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.95) 100%)',
             backdropFilter: 'blur(10px)'
@@ -1994,7 +1994,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (
         <div 
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-[100] p-4"
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-[300] p-4"
           style={{ backdropFilter: 'blur(10px)' }}
           onClick={() => setFullscreenImage(null)}
         >

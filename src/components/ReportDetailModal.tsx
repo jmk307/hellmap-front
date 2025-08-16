@@ -70,7 +70,7 @@ export function ReportDetailModal({
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 flex items-center justify-center z-[100] p-3 sm:p-4 overflow-y-auto"
+      className="fixed inset-0 bg-black/80 flex items-center justify-center z-[250] p-3 sm:p-4 overflow-y-auto"
       onClick={onClose}
     >
       <Card 
