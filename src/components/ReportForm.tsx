@@ -280,20 +280,20 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out"
+      className="fixed inset-0 z-[9999] flex items-start sm:items-center justify-center p-0 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out overflow-y-auto"
       style={{ 
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
         animation: 'fadeIn 0.3s ease-out'
       }}
     >
       <div 
-        className="w-full max-w-2xl h-[95vh] sm:h-[90vh] flex flex-col transition-all duration-300 ease-out"
+        className="w-full max-w-2xl min-h-full sm:min-h-0 sm:max-h-[95vh] flex flex-col transition-all duration-300 ease-out my-0 sm:my-4"
         style={{
           animation: 'slideInUp 0.3s ease-out'
         }}
       >
         <Card 
-          className="border hellmap-card-glow flex flex-col h-full shadow-2xl"
+          className="border hellmap-card-glow flex flex-col h-full sm:h-auto sm:max-h-[95vh] shadow-2xl rounded-none sm:rounded-lg"
           style={{ 
             backgroundColor: 'var(--hellmap-card-bg)',
             borderColor: selectedEmotion.color,
@@ -302,7 +302,7 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
         >
           {/* Header */}
           <div 
-            className="p-3 sm:p-4 lg:p-5 border-b flex-shrink-0"
+            className="p-4 sm:p-4 lg:p-5 border-b flex-shrink-0"
             style={{ borderColor: 'var(--hellmap-border)' }}
           >
             <div className="flex items-center justify-between">
@@ -346,7 +346,7 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
           {/* Form Content */}
           <div className="flex-1 overflow-hidden">
             <div 
-              className="h-full overflow-y-auto p-3 sm:p-4 lg:p-5 hellmap-scroll"
+              className="h-full overflow-y-auto p-4 sm:p-4 lg:p-5 hellmap-scroll"
               style={{
                 '--scrollbar-color': selectedEmotion.color
               } as React.CSSProperties}
@@ -648,7 +648,7 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
 
           {/* Footer */}
           <div 
-            className="p-3 sm:p-4 lg:p-5 border-t flex-shrink-0"
+            className="p-4 sm:p-4 lg:p-5 border-t flex-shrink-0"
             style={{ borderColor: 'var(--hellmap-border)' }}
           >
             <div className="flex gap-2 sm:gap-3">

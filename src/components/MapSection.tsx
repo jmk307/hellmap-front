@@ -1513,78 +1513,110 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
           </div>
         )}
 
-        {/* Map Legend */}
+                {/* Map Legend - 반응형 */}
         {isMapLoaded && !mapError && (
-          <div className="absolute bottom-4 left-4 pointer-events-auto">
-            <Card 
-              className="p-3 border"
-              style={{
-                backgroundColor: 'var(--hellmap-card-bg)',
-                borderColor: 'var(--hellmap-border)'
-              }}
-            >
-              <div className="space-y-2">
-                <h4 
-                  className="text-xs mb-2"
-                  style={{ color: 'var(--hellmap-text-primary)' }}
-                >
-                  🗺️ 헬맵 감정 분석
-                </h4>
-                
-                {/* 지역 마커 설명 */}
-                <div className="space-y-1 text-xs">
-                  <div className="flex items-center gap-2">
-                    <div 
-                      className="w-5 h-5 flex items-center justify-center relative"
-                      style={{ 
-                        background: `conic-gradient(from 0deg, #FF4444, #FF444480, #FF444460, #FF4444)`,
-                        border: '1px solid #FF4444',
-                        clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                        borderRadius: '20%'
-                      }}
-                    >
-                      <span style={{ fontSize: '6px' }}>🤖</span>
+          <>
+            {/* Desktop Legend */}
+            <div className="absolute bottom-4 left-4 pointer-events-auto hidden lg:block">
+              <Card 
+                className="p-3 border"
+                style={{
+                  backgroundColor: 'var(--hellmap-card-bg)',
+                  borderColor: 'var(--hellmap-border)'
+                }}
+              >
+                <div className="space-y-2">
+                  <h4 
+                    className="text-xs mb-2"
+                    style={{ color: 'var(--hellmap-text-primary)' }}
+                  >
+                    🗺️ 헬맵 감정 분석
+                  </h4>
+                    
+                  {/* 지역 마커 설명 */}
+                  <div className="space-y-1 text-xs">
+                    <div className="flex items-center gap-2">
+                      <div 
+                        className="w-5 h-5 flex items-center justify-center relative"
+                        style={{ 
+                          background: `conic-gradient(from 0deg, #FF4444, #FF444480, #FF444460, #FF4444)`,
+                          border: '1px solid #FF4444',
+                          clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                          borderRadius: '20%'
+                        }}
+                      >
+                        <span style={{ fontSize: '6px' }}>🤖</span>
+                      </div>
+                      <span style={{ color: 'var(--hellmap-text-muted)' }}>AI 분석 지역 (헥사곤)</span>
                     </div>
-                    <span style={{ color: 'var(--hellmap-text-muted)' }}>AI 분석 지역 (헥사곤)</span>
+                    
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#FF444440', borderColor: '#FF4444' }}>
+                        <span style={{ fontSize: '8px' }}>😨</span>
+                      </div>
+                      <span style={{ color: 'var(--hellmap-text-muted)' }}>개무섭 감정</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#FF880040', borderColor: '#FF8800' }}>
+                        <span style={{ fontSize: '8px' }}>😠</span>
+                      </div>
+                      <span style={{ color: 'var(--hellmap-text-muted)' }}>개짜증 감정</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#00FF8840', borderColor: '#00FF88' }}>
+                        <span style={{ fontSize: '8px' }}>😂</span>
+                      </div>
+                      <span style={{ color: 'var(--hellmap-text-muted)' }}>개웃김 감정</span>
+                    </div>
                   </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#FF444440', borderColor: '#FF4444' }}>
-                      <span style={{ fontSize: '8px' }}>😨</span>
-                    </div>
-                    <span style={{ color: 'var(--hellmap-text-muted)' }}>개무섭 감정</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#FF880040', borderColor: '#FF8800' }}>
-                      <span style={{ fontSize: '8px' }}>😠</span>
-                    </div>
-                    <span style={{ color: 'var(--hellmap-text-muted)' }}>개짜증 감정</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center" style={{ backgroundColor: '#00FF8840', borderColor: '#00FF88' }}>
-                      <span style={{ fontSize: '8px' }}>😂</span>
-                    </div>
-                    <span style={{ color: 'var(--hellmap-text-muted)' }}>개웃김 감정</span>
+                    
+                  <div 
+                    className="text-xs mt-2 pt-2 border-t"
+                    style={{ 
+                      borderColor: 'var(--hellmap-border)',
+                      color: 'var(--hellmap-text-muted)' 
+                    }}
+                  >
+                    🔸 <strong>헥사곤 마커</strong>: AI 분석된 지역<br/>
+                    🏷️ <strong>구 이름 라벨</strong>: 지역 식별 표시<br/>
+                    📍 <strong>현재 위치</strong>: 가장 가까운 구 표시<br/>
+                    🎯 <strong>네온 마커</strong>: 개별 제보<br/>
+                    ❤️ <strong>빨간 배지</strong>: 좋아요/지옥도<br/>
+                    ✨ <strong>홀로그램</strong>: 고위험 지역 (Lv4+)
                   </div>
                 </div>
-                
-                <div 
-                  className="text-xs mt-2 pt-2 border-t"
-                  style={{ 
-                    borderColor: 'var(--hellmap-border)',
-                    color: 'var(--hellmap-text-muted)' 
-                  }}
-                >
-                  🔸 <strong>헥사곤 마커</strong>: AI 분석된 지역<br/>
-                  🏷️ <strong>구 이름 라벨</strong>: 지역 식별 표시<br/>
-                  📍 <strong>현재 위치</strong>: 가장 가까운 구 표시<br/>
-                  🎯 <strong>네온 마커</strong>: 개별 제보<br/>
-                  ❤️ <strong>빨간 배지</strong>: 좋아요/지옥도<br/>
-                  ✨ <strong>홀로그램</strong>: 고위험 지역 (Lv4+)
+              </Card>
+            </div>
+
+            {/* Mobile Legend - 간소화된 버전 */}
+            <div className="absolute bottom-4 left-4 pointer-events-auto block lg:hidden">
+              <Card 
+                className="p-2 border"
+                style={{
+                  backgroundColor: 'var(--hellmap-card-bg)',
+                  borderColor: 'var(--hellmap-border)'
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  {/* 감정 아이콘들만 간단히 표시 */}
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 rounded-full border flex items-center justify-center" style={{ backgroundColor: '#FF444440', borderColor: '#FF4444' }}>
+                      <span style={{ fontSize: '6px' }}>😨</span>
+                    </div>
+                    <div className="w-3 h-3 rounded-full border flex items-center justify-center" style={{ backgroundColor: '#FF880040', borderColor: '#FF8800' }}>
+                      <span style={{ fontSize: '6px' }}>😠</span>
+                    </div>
+                    <div className="w-3 h-3 rounded-full border flex items-center justify-center" style={{ backgroundColor: '#00FF8840', borderColor: '#00FF88' }}>
+                      <span style={{ fontSize: '6px' }}>😂</span>
+                    </div>
+                  </div>
+                  <div className="text-xs" style={{ color: 'var(--hellmap-text-muted)' }}>
+                    감정 지도
+                  </div>
                 </div>
-              </div>
-            </Card>
-          </div>
+              </Card>
+            </div>
+          </>
         )}
 
         {/* AI Analysis Status */}

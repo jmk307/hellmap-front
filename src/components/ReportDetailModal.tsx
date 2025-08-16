@@ -70,18 +70,18 @@ export function ReportDetailModal({
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 flex items-center justify-center z-[100] p-4"
+      className="fixed inset-0 bg-black/80 flex items-start sm:items-center justify-center z-[100] p-0 sm:p-4 overflow-y-auto"
       onClick={onClose}
     >
       <Card 
-        className={`max-w-2xl w-full max-h-[85vh] border overflow-hidden ${getEmotionGlow(report.emotion)}`}
+        className={`max-w-2xl w-full min-h-full sm:min-h-0 sm:max-h-[90vh] border overflow-hidden rounded-none sm:rounded-lg my-0 sm:my-4 ${getEmotionGlow(report.emotion)}`}
         style={{
           backgroundColor: 'var(--hellmap-card-bg)',
           borderColor: getEmotionColor(report.emotion)
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex flex-col h-full max-h-[85vh]">
+        <div className="flex flex-col h-full sm:max-h-[90vh]">
           {/* Header */}
           <div 
             className="p-4 lg:p-6 border-b flex-shrink-0"
@@ -158,10 +158,10 @@ export function ReportDetailModal({
 
           {/* Content */}
           <div 
-            className="overflow-y-auto hellmap-scroll"
+            className="overflow-y-auto hellmap-scroll flex-1"
             style={{ 
-              height: '400px', 
-              maxHeight: '50vh',
+              minHeight: '300px',
+              maxHeight: 'none',
               '--scrollbar-color': getEmotionColor(report.emotion)
             } as React.CSSProperties}
           >
@@ -174,12 +174,12 @@ export function ReportDetailModal({
                     <img
                       src={report.imageUrl}
                       alt={report.title}
-                      className="w-full h-64 lg:h-80 object-cover"
+                      className="w-full h-48 sm:h-64 lg:h-80 object-cover"
                     />
                   ) : (report.videoUrl && report.videoUrl.trim() !== '') ? (
                     <video
                       src={report.videoUrl}
-                      className="w-full h-64 lg:h-80 object-cover"
+                      className="w-full h-48 sm:h-64 lg:h-80 object-cover"
                       controls
                       autoPlay
                       muted
@@ -301,8 +301,8 @@ export function ReportDetailModal({
             className="p-4 lg:p-6 border-t flex-shrink-0"
             style={{ borderColor: 'var(--hellmap-border)' }}
           >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+              <div className="flex items-center gap-3 w-full sm:w-auto">
                 <Button
                   onClick={handleLike}
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105 ${
@@ -323,7 +323,7 @@ export function ReportDetailModal({
 
               {/* 작성자인 경우에만 수정/삭제 버튼 표시 */}
               {isOwner && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                   {onEdit && (
                     <Button
                       onClick={() => onEdit(report)}
