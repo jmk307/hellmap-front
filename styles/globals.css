@@ -673,6 +673,24 @@ div[class*="naver-map"] * {
   max-height: none !important;
 }
 
+/* 모바일에서 추가적인 네이버 지도 요소 강제 숨김 */
+@media (max-width: 768px) {
+  body:has(.z-\[9999\]) .naver-map,
+  body:has(.z-\[9999\]) [id*="map"],
+  body:has(.z-\[9999\]) div[class*="naver-map"] {
+    z-index: -10 !important;
+    position: relative !important;
+  }
+  
+  body:has(.z-\[9999\]) .naver-map *,
+  body:has(.z-\[9999\]) [id*="map"] *,
+  body:has(.z-\[9999\]) div[class*="naver-map"] * {
+    z-index: -10 !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+  }
+}
+
 /* 특별히 문제가 되는 네이버 지도 요소들 */
 .naver-map div,
 .naver-map button,
@@ -683,16 +701,32 @@ div[class*="naver-map"] * {
   z-index: 0 !important;
 }
 
-/* 모달이 열렸을 때 지도 컨트롤 숨기기 */
+/* 모달이 열렸을 때 지도 컨트롤과 로고 완전히 숨기기 */
 body:has(.z-\[9999\]) .nmap-control-map-type,
 body:has(.z-\[9999\]) .nmap-control-zoom,
 body:has(.z-\[9999\]) .nmap-control-scale,
 body:has(.z-\[9999\]) .nmap-control-compass,
+body:has(.z-\[9999\]) .nmap-control-logo,
+body:has(.z-\[9999\]) .nmap-control-logo-naver,
+body:has(.z-\[9999\]) .nmap-logo,
+body:has(.z-\[9999\]) .naver-logo,
+body:has(.z-\[9999\]) .nmap-control-attribution,
+body:has(.z-\[9999\]) .nmap-attribution,
 body:has(.z-\[9999\]) .gmnoprint,
 body:has(.z-\[9999\]) div[class*="nmap-control"],
 body:has(.z-\[9999\]) div[class*="control-zoom"],
-body:has(.z-\[9999\]) div[class*="control-map"] {
+body:has(.z-\[9999\]) div[class*="control-map"],
+body:has(.z-\[9999\]) div[class*="logo"],
+body:has(.z-\[9999\]) div[class*="nmap-logo"],
+body:has(.z-\[9999\]) div[class*="naver-logo"],
+body:has(.z-\[9999\]) div[class*="attribution"],
+body:has(.z-\[9999\]) div[class*="copyright"],
+body:has(.z-\[9999\]) a[href*="naver.com"],
+body:has(.z-\[9999\]) a[href*="navercorp.com"] {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  z-index: -1 !important;
 }
 
 /* HellMap 커스텀 스크롤바 스타일 */
@@ -914,5 +948,34 @@ body:has(.z-\[9999\]) div[class*="control-map"] {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+}
+
+/* 추가적인 네이버 지도 로고 강제 숨김 (모든 경우) */
+img[src*="naver"],
+img[src*="logo"],
+img[alt*="naver"], 
+img[alt*="NAVER"],
+div[title*="naver"],
+div[title*="NAVER"],
+span[title*="naver"],
+span[title*="NAVER"],
+/* 네이버 특정 클래스들 */
+.nmap_logo_area,
+.nmap_copyright,
+#nmap_logo,
+#nmap_copyright,
+/* 더 구체적인 선택자들 */
+div[style*="background"][style*="naver"],
+a[title*="NAVER"],
+a[title*="naver"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  z-index: -999 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
 }
 
