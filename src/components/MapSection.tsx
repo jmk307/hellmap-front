@@ -1547,7 +1547,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                       >
                         <span style={{ fontSize: '6px' }}>🤖</span>
                       </div>
-                      <span style={{ color: 'var(--hellmap-text-muted)' }}>AI 분석 지역 (헥사곤)</span>
+                      <span style={{ color: 'var(--hellmap-text-muted)' }}>AI 분석 지역</span>
                     </div>
                     
                     <div className="flex items-center gap-2">
@@ -1577,7 +1577,7 @@ export function MapSection({ activeFilter, reports = [], onReportClick }: MapSec
                       color: 'var(--hellmap-text-muted)' 
                     }}
                   >
-                    🔸 <strong>헥사곤 마커</strong>: AI 분석된 지역<br/>
+                    🔸 <strong>원형 마커</strong>: AI 분석된 지역<br/>
                     🏷️ <strong>구 이름 라벨</strong>: 지역 식별 표시<br/>
                     📍 <strong>현재 위치</strong>: 가장 가까운 구 표시<br/>
                     🎯 <strong>네온 마커</strong>: 개별 제보<br/>

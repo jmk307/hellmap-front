@@ -4,6 +4,7 @@ import { Card } from './ui/card';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { HellMapLogo } from './icons/HellMapLogo';
+import { PublicFeedbackBoard } from './PublicFeedbackBoard';
 
 interface FeedbackModalProps {
   onClose: () => void;
@@ -11,31 +12,32 @@ interface FeedbackModalProps {
 }
 
 interface FeedbackData {
-  feedbackType: 'feature' | 'bug' | 'improvement' | 'other';
+  feedbackType: 'FEATURE' | 'BUG' | 'IMPROVEMENT' | 'OTHER';
   title: string;
   description: string;
-  priority: 'low' | 'medium' | 'high';
+  priority: 'LOW' | 'MEDIUM' | 'HIGH';
   userNickname?: string;
 }
 
 export function FeedbackModal({ onClose, onSubmit }: FeedbackModalProps) {
+  const [view, setView] = useState<'form' | 'public'>('public');
   const [feedbackType, setFeedbackType] = useState<string>('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState<string>('medium');
+  const [priority, setPriority] = useState<string>('MEDIUM');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const feedbackTypes = [
-    { value: 'feature', label: '새로운 기능 제안', icon: '💡' },
-    { value: 'bug', label: '버그 리포트', icon: '🐛' },
-    { value: 'improvement', label: '개선 사항', icon: '⚡' },
-    { value: 'other', label: '기타 의견', icon: '💬' }
+    { value: 'FEATURE', label: '새로운 기능 제안', icon: '💡' },
+    { value: 'BUG', label: '버그 리포트', icon: '🐛' },
+    { value: 'IMPROVEMENT', label: '개선 사항', icon: '⚡' },
+    { value: 'OTHER', label: '기타 의견', icon: '💬' }
   ];
 
   const priorities = [
-    { value: 'low', label: '낮음', color: 'var(--hellmap-neon-blue)' },
-    { value: 'medium', label: '보통', color: 'var(--hellmap-neon-orange)' },
-    { value: 'high', label: '높음', color: 'var(--hellmap-fear-color)' }
+    { value: 'LOW', label: '낮음', color: 'var(--hellmap-neon-blue)' },
+    { value: 'MEDIUM', label: '보통', color: 'var(--hellmap-neon-orange)' },
+    { value: 'HIGH', label: '높음', color: 'var(--hellmap-fear-color)' }
   ];
 
   const handleSubmit = async () => {
@@ -63,9 +65,10 @@ export function FeedbackModal({ onClose, onSubmit }: FeedbackModalProps) {
       setFeedbackType('');
       setTitle('');
       setDescription('');
-      setPriority('medium');
+      setPriority('MEDIUM');
       
-      onClose();
+      // 피드백 제출 후 공개 게시판으로 돌아가기
+      setView('public');
     } catch (error) {
       console.error('피드백 제출 실패:', error);
       alert('피드백 제출에 실패했습니다. 다시 시도해주세요.');
@@ -73,6 +76,16 @@ export function FeedbackModal({ onClose, onSubmit }: FeedbackModalProps) {
       setIsSubmitting(false);
     }
   };
+
+  // 공개 피드백 게시판 보기
+  if (view === 'public') {
+    return (
+      <PublicFeedbackBoard 
+        onClose={onClose}
+        onNewFeedback={() => setView('form')}
+      />
+    );
+  }
 
   return (
     <div 
@@ -115,17 +128,31 @@ export function FeedbackModal({ onClose, onSubmit }: FeedbackModalProps) {
                 </div>
               </div>
               
-              <Button
-                onClick={onClose}
-                className="w-10 h-10 rounded-full border-2 hover:scale-110 transition-transform"
-                style={{
-                  backgroundColor: 'var(--hellmap-card-bg)',
-                  borderColor: 'var(--hellmap-border)',
-                  color: 'var(--hellmap-text-secondary)'
-                }}
-              >
-                ✕
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  onClick={() => setView('public')}
+                  className="px-3 py-1.5 rounded-lg border-2 transition-all duration-300 hover:scale-105 text-sm"
+                  style={{
+                    backgroundColor: 'var(--hellmap-card-bg)',
+                    borderColor: 'var(--hellmap-neon-green)',
+                    color: 'var(--hellmap-neon-green)'
+                  }}
+                >
+                  🌍 피드백 게시판
+                </Button>
+                
+                <Button
+                  onClick={onClose}
+                  className="w-10 h-10 rounded-full border-2 hover:scale-110 transition-transform"
+                  style={{
+                    backgroundColor: 'var(--hellmap-card-bg)',
+                    borderColor: 'var(--hellmap-border)',
+                    color: 'var(--hellmap-text-secondary)'
+                  }}
+                >
+                  ✕
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -313,7 +340,7 @@ export function FeedbackModal({ onClose, onSubmit }: FeedbackModalProps) {
             style={{ borderColor: 'var(--hellmap-border)' }}
           >
             <Button
-              onClick={onClose}
+              onClick={() => setView('public')}
               className="px-4 py-1.5 rounded-lg border-2 transition-all duration-300 hover:scale-105 text-sm"
               style={{
                 backgroundColor: 'var(--hellmap-card-bg)',
