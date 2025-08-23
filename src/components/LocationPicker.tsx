@@ -11,31 +11,31 @@ interface LocationPickerProps {
 
 // 서울시 구별 행정코드 매핑
 const SEOUL_DISTRICT_CODES = {
-  '강남구': 11680,
-  '강동구': 11740,
-  '강북구': 11305,
-  '강서구': 11500,
-  '관악구': 11620,
-  '광진구': 11215,
-  '구로구': 11530,
-  '금천구': 11545,
-  '노원구': 11350,
-  '도봉구': 11320,
-  '동대문구': 11230,
-  '동작구': 11590,
-  '마포구': 11440,
-  '서대문구': 11410,
-  '서초구': 11650,
-  '성동구': 11200,
-  '성북구': 11290,
-  '송파구': 11710,
-  '양천구': 11470,
-  '영등포구': 11560,
-  '용산구': 11170,
-  '은평구': 11380,
-  '종로구': 11110,
-  '중구': 11140,
-  '중랑구': 11260
+  '서울특별시 강남구': 11680,
+  '서울특별시 강동구': 11740,
+  '서울특별시 강북구': 11305,
+  '서울특별시 강서구': 11500,
+  '서울특별시 관악구': 11620,
+  '서울특별시 광진구': 11215,
+  '서울특별시 구로구': 11530,
+  '서울특별시 금천구': 11545,
+  '서울특별시 노원구': 11350,
+  '서울특별시 도봉구': 11320,
+  '서울특별시 동대문구': 11230,
+  '서울특별시 동작구': 11590,
+  '서울특별시 마포구': 11440,
+  '서울특별시 서대문구': 11410,
+  '서울특별시 서초구': 11650,
+  '서울특별시 성동구': 11200,
+  '서울특별시 성북구': 11290,
+  '서울특별시 송파구': 11710,
+  '서울특별시 양천구': 11470,
+  '서울특별시 영등포구': 11560,
+  '서울특별시 용산구': 11170,
+  '서울특별시 은평구': 11380,
+  '서울특별시 종로구': 11110,
+  '서울특별시 중구': 11140,
+  '서울특별시 중랑구': 11260
 } as const;
 
 // 주소에서 구 이름을 추출하는 함수
@@ -55,7 +55,7 @@ const getRegionCode = (address: string): number | undefined => {
   if (district) {
     return SEOUL_DISTRICT_CODES[district as keyof typeof SEOUL_DISTRICT_CODES];
   }
-  return undefined;
+  return 0;
 };
 
 interface SearchResult {
@@ -521,9 +521,10 @@ export function LocationPicker({ onLocationSelect, initialLocation, className, e
             region: region || '지역 정보 없음'
           };
 
-  
+          const regionCode = getRegionCode(locationInfo.address);
+          
           setSelectedLocation(locationInfo);
-          onLocationSelect(locationInfo.address, locationInfo.coordinates, getRegionCode(locationInfo.address));
+          onLocationSelect(locationInfo.address, locationInfo.coordinates, regionCode);
         });
       } catch (error) {
         console.error('주소 변환 중 오류:', error);
@@ -785,6 +786,25 @@ export function LocationPicker({ onLocationSelect, initialLocation, className, e
               >
                 {selectedLocation.address}
               </p>
+              {/* 서울 외 지역 베타 테스트 안내 */}
+              {getRegionCode(selectedLocation.address) === 0 && (
+                <div 
+                  className="mt-2 p-2 rounded-lg border"
+                  style={{
+                    backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                    borderColor: '#ffc107',
+                    color: '#ffc107'
+                  }}
+                >
+                  <div className="flex items-center gap-1 text-xs">
+                    <span>🚧</span>
+                    <span className="font-medium">서울 외 지역 베타 테스트 중</span>
+                  </div>
+                  <p className="text-xs mt-1 opacity-80">
+                    현재 이 지역은 서울 지역 밖으로, 지역 마커는 표시되지 않지만 제보는 정상적으로 등록됩니다.
+                  </p>
+                </div>
+              )}
               <p 
                 className="text-xs mt-2 opacity-70"
                 style={{ color: 'var(--hellmap-text-muted)' }}

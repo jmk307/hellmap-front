@@ -164,9 +164,10 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
       newErrors.location = '위치를 다시 선택해주세요';
     } else {
       const { lat, lng } = locationCoordinates;
-      // 한국 영역 좌표 검사 (대략적인 범위)
-      if (lat < 33 || lat > 38.5 || lng < 125 || lng > 132) {
-        newErrors.location = '한국 내의 위치를 선택해주세요';
+      // 한국 영역 좌표 검사 (확장된 범위 - 전국 지원)
+      // 제주도, 울릉도, 독도 등을 포함한 대한민국 전체 영역
+      if (lat < 32.5 || lat > 39.5 || lng < 124 || lng > 132.5) {
+        newErrors.location = '대한민국 내의 위치를 선택해주세요';
       }
     }
 
@@ -209,7 +210,7 @@ export function ReportForm({ onSubmit, onCancel, editData, userNickname }: Repor
         title: titleWithPrefix,
         content,
         address: location,
-        regionCode: selectedRegionCode,
+        regionCode: selectedRegionCode || 0, // 서울 외 지역은 0으로 설정
         latitude: locationCoordinates?.lat || 0,
         longitude: locationCoordinates?.lng || 0
       };
