@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { HellMapLogo } from './icons/HellMapLogo';
-export type FeedbackStatus = 'pending' | 'reviewing' | 'completed' | 'rejected';
+export type FeedbackStatus = 'PENDING' | 'REVIEWING' | 'COMPLETED' | 'REJECTED';
 
 export interface FeedbackItem {
   feedbackId: string;
@@ -45,29 +45,25 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
       label: '대기중', 
       color: 'var(--hellmap-text-muted)', 
       bgColor: 'rgba(128, 128, 128, 0.2)',
-      icon: '⏳',
-      frontendKey: 'pending' as const
+      icon: '⏳'
     },
     REVIEWING: { 
       label: '검토중', 
       color: 'var(--hellmap-neon-orange)', 
       bgColor: 'rgba(249, 115, 22, 0.2)',
-      icon: '👀',
-      frontendKey: 'reviewing' as const
+      icon: '👀'
     },
     COMPLETED: { 
       label: '완료', 
       color: 'var(--hellmap-neon-green)', 
       bgColor: 'rgba(34, 197, 94, 0.2)',
-      icon: '✅',
-      frontendKey: 'completed' as const
+      icon: '✅'
     },
     REJECTED: { 
       label: '거부', 
       color: 'var(--hellmap-fear-color)', 
       bgColor: 'rgba(220, 38, 127, 0.2)',
-      icon: '❌',
-      frontendKey: 'rejected' as const
+      icon: '❌'
     }
   };
 
@@ -117,6 +113,8 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
         responseAt: item.responseAt
       }));
 
+      console.log('📊 변환된 피드백 데이터:', transformedFeedbacks);
+      console.log('📊 피드백 상태들:', transformedFeedbacks.map(f => f.status));
       setFeedbacks(transformedFeedbacks);
     } catch (error) {
       console.error('공개 피드백 목록 조회 실패:', error);
@@ -263,16 +261,21 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
 
   // 필터링된 피드백 목록
   const filteredFeedbacks = feedbacks.filter(feedback => {
-    // 상태 필터링: 프론트엔드 키와 백엔드 키 매핑
-    const statusMatch = activeFilter === 'all' || 
-      (activeFilter === 'pending' && feedback.status === 'PENDING') ||
-      (activeFilter === 'reviewing' && feedback.status === 'REVIEWING') ||
-      (activeFilter === 'completed' && feedback.status === 'COMPLETED') ||
-      (activeFilter === 'rejected' && feedback.status === 'REJECTED');
+    // 상태 필터링: 이제 직접 매칭
+    const statusMatch = activeFilter === 'all' || feedback.status === activeFilter;
     
     const typeMatch = activeTypeFilter === 'all' || feedback.feedbackType === activeTypeFilter;
     return statusMatch && typeMatch;
   });
+
+  // 필터링 디버깅
+  console.log('🔍 현재 activeFilter:', activeFilter);
+  console.log('🔍 전체 피드백 수:', feedbacks.length);
+  console.log('🔍 필터링된 피드백 수:', filteredFeedbacks.length);
+  console.log('🔍 피드백 상태 분포:', feedbacks.reduce((acc, f) => {
+    acc[f.status] = (acc[f.status] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>));
 
   // 피드백 상세 보기
   if (selectedFeedback) {
@@ -626,10 +629,10 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
               {/* 상태 필터 */}
               <div>
                 <p className="text-xs font-medium mb-2" style={{ color: 'var(--hellmap-text-muted)' }}>상태별 필터</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   <Button
                     onClick={() => setActiveFilter('all')}
-                    className={`px-3 py-1.5 rounded-lg border transition-all text-xs ${
+                    className={`px-2 sm:px-3 py-1.5 rounded-lg border transition-all text-xs sm:text-sm whitespace-nowrap ${
                       activeFilter === 'all' ? 'border-2' : ''
                     }`}
                     style={{
@@ -638,22 +641,24 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
                       color: activeFilter === 'all' ? 'black' : 'var(--hellmap-text-secondary)'
                     }}
                   >
-                    전체 ({feedbacks.length})
+                    <span className="hidden sm:inline">전체 ({feedbacks.length})</span>
+                    <span className="sm:hidden">전체</span>
                   </Button>
                   {Object.entries(statusConfig).map(([status, config]) => (
                     <Button
                       key={status}
                       onClick={() => setActiveFilter(status as FeedbackStatus)}
-                      className={`px-3 py-1.5 rounded-lg border transition-all text-xs ${
+                      className={`px-2 sm:px-3 py-1.5 rounded-lg border transition-all text-xs sm:text-sm whitespace-nowrap ${
                         activeFilter === status ? 'border-2' : ''
                       }`}
                       style={{
                         backgroundColor: activeFilter === status ? config.color : 'var(--hellmap-card-bg)',
                         borderColor: config.color,
-                        color: activeFilter === status ? (status === 'pending' ? 'white' : 'black') : config.color
+                        color: activeFilter === status ? (status === 'PENDING' ? 'white' : 'black') : config.color
                       }}
                     >
-                      {config.icon} {config.label} ({feedbacks.filter(f => f.status === status).length})
+                      <span className="hidden sm:inline">{config.icon} {config.label} ({feedbacks.filter(f => f.status === status).length})</span>
+                      <span className="sm:hidden">{config.icon} {config.label}</span>
                     </Button>
                   ))}
                 </div>
@@ -662,10 +667,10 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
               {/* 유형 필터 */}
               <div>
                 <p className="text-xs font-medium mb-2" style={{ color: 'var(--hellmap-text-muted)' }}>유형별 필터</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   <Button
                     onClick={() => setActiveTypeFilter('all')}
-                    className={`px-3 py-1.5 rounded-lg border transition-all text-xs ${
+                    className={`px-2 sm:px-3 py-1.5 rounded-lg border transition-all text-xs sm:text-sm whitespace-nowrap ${
                       activeTypeFilter === 'all' ? 'border-2' : ''
                     }`}
                     style={{
@@ -680,7 +685,7 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
                     <Button
                       key={type}
                       onClick={() => setActiveTypeFilter(type as any)}
-                      className={`px-3 py-1.5 rounded-lg border transition-all text-xs ${
+                      className={`px-2 sm:px-3 py-1.5 rounded-lg border transition-all text-xs sm:text-sm whitespace-nowrap ${
                         activeTypeFilter === type ? 'border-2' : ''
                       }`}
                       style={{
@@ -689,7 +694,8 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
                         color: activeTypeFilter === type ? 'black' : config.color
                       }}
                     >
-                      {config.icon} {config.label} ({feedbacks.filter(f => f.feedbackType === type).length})
+                      <span className="hidden sm:inline">{config.icon} {config.label} ({feedbacks.filter(f => f.feedbackType === type).length})</span>
+                      <span className="sm:hidden">{config.icon} {config.label}</span>
                     </Button>
                   ))}
                 </div>
@@ -738,23 +744,28 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
                     }}
                   >
                     <div className="flex items-start justify-between">
-                      <div className="flex items-start gap-3 flex-1">
+                      <div className="flex items-start gap-3 flex-1 min-w-0">
                         <span 
-                          className="text-2xl"
+                          className="text-2xl flex-shrink-0"
                           style={{ color: feedbackTypes[feedback.feedbackType].color }}
                         >
                           {feedbackTypes[feedback.feedbackType].icon}
                         </span>
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
+                          {/* 모바일에서는 제목과 상태를 세로로 배치 */}
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-1">
                             <h3 
-                              className="font-medium truncate"
-                              style={{ color: 'var(--hellmap-text-primary)' }}
+                              className="font-medium text-sm sm:text-base break-words line-clamp-2 sm:line-clamp-1 flex-1 min-w-0"
+                              style={{ 
+                                color: 'var(--hellmap-text-primary)',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'break-word'
+                              }}
                             >
                               {feedback.title}
                             </h3>
                             <span 
-                              className="text-xs font-medium px-2 py-1 rounded-full flex-shrink-0"
+                              className="text-xs font-medium px-2 py-1 rounded-full flex-shrink-0 self-start sm:self-center"
                               style={{ 
                                 backgroundColor: statusConfig[feedback.status]?.bgColor || 'rgba(128, 128, 128, 0.2)',
                                 color: statusConfig[feedback.status]?.color || 'var(--hellmap-text-muted)'
@@ -769,15 +780,20 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
                           >
                             {feedback.description}
                           </p>
-                          <div className="flex items-center gap-3 text-xs" style={{ color: 'var(--hellmap-text-muted)' }}>
-                            <span>👤 {feedback.author}</span>
-                            <span>•</span>
-                            <span>{formatDate(feedback.createdAt)}</span>
-                            <span>•</span>
+                          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs" style={{ color: 'var(--hellmap-text-muted)' }}>
+                            <span className="flex items-center gap-1">
+                              <span>👤</span>
+                              <span className="truncate max-w-[100px] sm:max-w-none">{feedback.author}</span>
+                            </span>
+                            <span className="hidden sm:inline">•</span>
+                            <span className="text-xs">{formatDate(feedback.createdAt)}</span>
+                            <span className="hidden sm:inline">•</span>
                             <span 
+                              className="text-xs whitespace-nowrap"
                               style={{ color: priorityConfig[feedback.priority].color }}
                             >
-                              {priorityConfig[feedback.priority].label} 우선순위
+                              <span className="sm:hidden">{priorityConfig[feedback.priority].label}</span>
+                              <span className="hidden sm:inline">{priorityConfig[feedback.priority].label} 우선순위</span>
                             </span>
                           </div>
                         </div>
