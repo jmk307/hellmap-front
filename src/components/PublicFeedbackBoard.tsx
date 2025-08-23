@@ -278,24 +278,29 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
   if (selectedFeedback) {
     return (
       <div 
-        className="fixed inset-0 z-50 overflow-y-auto"
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out overflow-y-auto"
         style={{ 
-          background: 'radial-gradient(circle at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.98) 100%)',
-          backdropFilter: 'blur(10px)'
+          backgroundColor: 'rgba(0, 0, 0, 0.85)',
+          animation: 'fadeIn 0.3s ease-out'
         }}
       >
-        <div className="min-h-screen p-4 flex items-center justify-center">
+        <div 
+          className="w-full max-w-4xl max-h-[90vh] flex flex-col transition-all duration-300 ease-out my-3 sm:my-4"
+          style={{
+            animation: 'slideInUp 0.3s ease-out'
+          }}
+        >
           <Card 
-            className="w-full max-w-2xl max-h-[80vh] border-2 overflow-hidden flex flex-col"
+            className="border hellmap-card-glow flex flex-col h-full shadow-2xl rounded-lg overflow-hidden"
             style={{
               backgroundColor: 'var(--hellmap-card-bg)',
               borderColor: statusConfig[selectedFeedback.status]?.color || 'var(--hellmap-border)',
-              boxShadow: `0 0 40px ${statusConfig[selectedFeedback.status]?.bgColor || 'rgba(128, 128, 128, 0.2)'}`
+              boxShadow: `0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px ${statusConfig[selectedFeedback.status]?.bgColor || 'rgba(128, 128, 128, 0.3)'}`
             }}
           >
             {/* Header */}
             <div 
-              className="p-4 border-b flex-shrink-0"
+              className="p-4 sm:p-4 lg:p-5 border-b flex-shrink-0"
               style={{ borderColor: 'var(--hellmap-border)' }}
             >
               <div className="flex items-center justify-between mb-3">
@@ -543,26 +548,31 @@ export function PublicFeedbackBoard({ onClose, onNewFeedback }: PublicFeedbackBo
 
   return (
     <div 
-      className="fixed inset-0 z-50 overflow-y-auto"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 backdrop-blur-md transition-all duration-300 ease-out overflow-y-auto"
       style={{ 
-        background: 'radial-gradient(circle at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.98) 100%)',
-        backdropFilter: 'blur(10px)'
+        backgroundColor: 'rgba(0, 0, 0, 0.85)',
+        animation: 'fadeIn 0.3s ease-out'
       }}
       onClick={handleModalClose}
     >
-      <div className="min-h-screen p-4 flex items-center justify-center">
+      <div 
+        className="w-full max-w-6xl max-h-[90vh] flex flex-col transition-all duration-300 ease-out my-3 sm:my-4"
+        style={{
+          animation: 'slideInUp 0.3s ease-out'
+        }}
+      >
         <Card 
-          className="w-full max-w-5xl max-h-[85vh] border-2 overflow-hidden flex flex-col"
-          style={{
+          className="border hellmap-card-glow flex flex-col h-full shadow-2xl rounded-lg overflow-hidden"
+          style={{ 
             backgroundColor: 'var(--hellmap-card-bg)',
             borderColor: 'var(--hellmap-neon-green)',
-            boxShadow: '0 0 40px rgba(0, 255, 136, 0.2)'
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(34, 197, 94, 0.3)'
           }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
           <div 
-            className="p-4 border-b flex-shrink-0"
+            className="p-4 sm:p-4 lg:p-5 border-b flex-shrink-0"
             style={{ borderColor: 'var(--hellmap-border)' }}
           >
             <div className="flex items-center justify-between mb-4">
